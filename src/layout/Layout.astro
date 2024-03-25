@@ -1,0 +1,30 @@
+---
+interface Props{
+
+}
+const {} = Astro.props
+---
+<!-- TODO, revisar si el doctype va -->
+<!-- <!doctype html> -->
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+        <!-- TODO, cambiar el favicon -->
+        <meta name="description" content="Astro description"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>RenPi</title>
+	</head>
+	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black">
+        <slot/>
+	</body>
+</html>
+<style is:global>
+    :root{
+
+    }
+    html{
+        color-scheme: dark light;
+    }
+</style>
