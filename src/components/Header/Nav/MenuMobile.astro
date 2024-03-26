@@ -1,0 +1,18 @@
+---
+interface Props{
+    nosotros:string;
+    planes:string;
+    servicios:string;
+    contacto:string;
+}
+const {nosotros,planes, servicios, contacto} = Astro.props
+---
+
+<div>
+    <ul>
+        <li>{nosotros}</li>
+        <li>{planes}</li>
+        <li>{servicios}</li>
+        <li>{contacto}</li>
+    </ul>
+</div>

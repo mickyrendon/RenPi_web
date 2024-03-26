@@ -1,8 +1,51 @@
 ---
 import Layout from "../layout/Layout.astro";
+import Nav from "../components/Header/Nav/Nav.astro";
+import Video from "../components/Header/Video.astro";
+import Us from "../components/UsSection/Us.astro";
+import Card from "../components/PacksCards/Card.astro";
+import Form from "../components/Footer/Form.astro";
+import {content} from '../components/PacksCards/content'
 
 
 ---
 <Layout>
-	
+	<header>
+		<Nav 
+		nosotros="Nosotros"
+		planes="Planes"
+		servicios="Servicios"
+		contacto="Contacto"
+		>
+		</Nav>
+		<Video/>
+	</header>
+	<main>
+		<Us/>
+		<section>
+			{
+				//FIXME, solucionar el render de los items
+				
+				content?.map((item) => (
+					// console.log(item.basic)
+					item.basic? <Card title={item.basic.title} item={item.basic.items}/>:console.log('test')
+					
+					
+						
+				))
+			}
+		</section>
+		<section>
+
+		</section>
+		<footer>
+			<Form
+			title="¡Contacta con nosotros!"
+			text="Estamos listos para ayudarte a lograr tus objetivos digitales."
+			nombre="Nombre"
+			email="Email"
+			content="Mensaje"
+			/>
+		</footer>
+	</main>
 </Layout>

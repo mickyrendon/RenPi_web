@@ -1,0 +1,31 @@
+---
+import Button from '../Button/Button.astro';
+
+interface Props{
+    title: string;
+    item: string;
+}
+const {title, item} = Astro.props
+---
+
+<div class="plan-card bg-gray-100 p-8 shadow-md w-96 md:w-80 md:h-full grid gap-4 js-scroll slide-left scrolled">
+    <h3>{title}</h3>
+    <ul>
+        {item}
+    </ul>
+    
+    <Button
+    value="Contratar"
+    />
+</div>
+<style>
+    .plan-card{
+        background: linear-gradient(to right top, rgba(16, 46, 75, 0.925), rgba(60, 69, 88, 0.966), rgba(45, 73, 102, 0.993));
+        border-radius: 0.3rem;
+        color: whitesmoke;
+        backdrop-filter: blur(5px);
+        border: 2px rgba(255,255,255,0.4) solid;
+        border-bottom: 2px rgba(40,40,40,0.35) solid;
+        border-right: 2px rgba(40,40,40,0.35) solid;
+    }
+</style>
