@@ -4,7 +4,8 @@ import Nav from "../components/Header/Nav/Nav.astro";
 import Video from "../components/Header/Video.astro";
 import Us from "../components/UsSection/Us.astro";
 import Card from "../components/PacksCards/Card.astro";
-import Form from "../components/Footer/Form.astro";
+import Form from "../components/Form/Form.astro";
+import Footer from "../components/Footer/Footer.astro"
 import {content} from '../components/PacksCards/content'
 
 
@@ -36,9 +37,6 @@ import {content} from '../components/PacksCards/content'
 			}
 		</section>
 		<section>
-
-		</section>
-		<footer>
 			<Form
 			title="¡Contacta con nosotros!"
 			text="Estamos listos para ayudarte a lograr tus objetivos digitales."
@@ -46,6 +44,9 @@ import {content} from '../components/PacksCards/content'
 			email="Email"
 			content="Mensaje"
 			/>
+		</section>
+		<footer>
+			<Footer/>
 		</footer>
 	</main>
 </Layout>
