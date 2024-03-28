@@ -1,0 +1,23 @@
+---
+import Article from './Card.astro';
+import {sContent} from './servicesContent'
+
+const servicesContent = sContent
+
+interface Props{
+    sectionTitle: string;
+}
+const {sectionTitle} = Astro.props
+---
+<div class="services-ctr container mx-auto w-10/12 gap-8 grid">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">{sectionTitle}</h2>
+    {
+        servicesContent?.map(item => (
+            <Article
+            title={item.title}
+            paragraph={item.content}
+            url={item.url}
+            />
+        ))
+    }
+</div>

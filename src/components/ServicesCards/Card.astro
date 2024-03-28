@@ -1,0 +1,31 @@
+---
+interface Props{
+    title: string;
+    paragraph: string;
+    url: string
+}
+const {title, paragraph, url} = Astro.props
+---
+<!-- FIXME, agregar la clase reverse  en md cada numero impar -->
+<div class="service-card grid place-items-center gap-6 md:flex md:flex-row md:justify-evenly md:items-center md:gap-8">
+    <div class="card-img p-4 w-72 h-72 rounded-full  bg-slate-50 shadow-md shadow-gray-800 js-scroll slide-left">
+        <figure class="flex w-full h-full">
+            <img src={url} alt={title} class="w-full">
+        </figure>
+    </div>
+    <div class="w-full md:w-1/2 js-scroll slide-right">
+        <h3 class="text-xl mb-4 text-center font-bold">{title}</h3>
+        <p class="text-md text-balance">
+        {paragraph}
+        </p>
+    </div>  
+</div>  
+<style>
+    .reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+  }
+</style>

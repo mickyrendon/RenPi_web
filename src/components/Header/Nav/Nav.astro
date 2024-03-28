@@ -34,13 +34,21 @@ const {nosotros,planes, servicios, contacto} = Astro.props
     </a>
 
     <ul class="hidden md:w-auto md:flex md:justify-between md:items-center md:gap-8">
-        <li>{nosotros}</li>
-        <li>{planes}</li>
-        <li>{servicios}</li>
-        <li>{contacto}</li>
+        <a href="#nosotros" >
+            <li>{nosotros}</li>
+        </a>
+        <a href="#planes" >
+            <li>{planes}</li>
+        </a>
+        <a href="#servicios" >
+            <li>{servicios}</li>
+        </a>
+        <a href="#contacto" >
+            <li>{contacto}</li>
+        </a>
     </ul>
     <!--TODO, checkear que funcione onclick=`${menuEvent(e)}` -->
-    <button class="menu-btn w-8 h-8 block bg-center bg-no-repeat bg-contain" ></button>
+    <button class="menu-btn w-8 h-8 block bg-center bg-no-repeat bg-contain md:hidden lg:hidden" ></button>
 </nav>
 <style>
     /* TODO, checkear las rutas al momento de compilar */
