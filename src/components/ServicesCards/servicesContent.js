@@ -2,7 +2,7 @@ export const sContent = [
     {
         title: 'Estrategia digital',
         content: 'consiste en definir los objetivos, las acciones y las herramientas que se utilizarán para promocionar una marca, un producto o un servicio en Internet. Una estrategia digital debe estar basada en un análisis del mercado, la competencia, el público objetivo y los recursos disponible',
-        url: './assets/moodboard/seo.svg'
+        url: './assets/moodboard/target.svg'
     },
     {
         title: 'Posicionamiento web (SEO):',

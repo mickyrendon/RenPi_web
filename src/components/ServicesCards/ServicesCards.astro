@@ -8,16 +8,24 @@ interface Props{
     sectionTitle: string;
 }
 const {sectionTitle} = Astro.props
+function impar(idx){
+    const impar = idx % 2 !== 0
+    
+    return impar
+}
+const impares = impar
 ---
 <div class="services-ctr container mx-auto w-10/12 gap-8 grid">
     <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">{sectionTitle}</h2>
     {
-        servicesContent?.map(item => (
-            <Article
+        servicesContent?.map((item, idx) => (
+       
+        <Article
             title={item.title}
             paragraph={item.content}
             url={item.url}
-            />
+            impar={impares(idx)}
+        />
         ))
     }
 </div>

@@ -4,10 +4,15 @@ import Nav from "../components/Header/Nav/Nav.astro";
 import Video from "../components/Header/Video.astro";
 import Us from "../components/UsSection/Us.astro";
 import Card from "../components/PacksCards/Card.astro";
+import Exclusive from "../components/PacksCards/Exclusive.astro";
 import ServicesCards from "../components/ServicesCards/ServicesCards.astro";
 import Form from "../components/Form/Form.astro";
 import Footer from "../components/Footer/Footer.astro"
+import Basic from "../components/PacksCards/Basic.astro";
+
 import {content} from '../components/PacksCards/content'
+import Premium from "../components/PacksCards/Premium.astro";
+import Standar from "../components/PacksCards/Standar.astro";
 
 
 ---
@@ -24,23 +29,52 @@ import {content} from '../components/PacksCards/content'
 	</header>
 	<main>
 		<Us id="nosotros"/>
-		<section id="planes">
-			{
-				//FIXME, solucionar el render de los items
-				
-				content?.map((item) => (
-					// console.log(item.basic)
-					item.basic? <Card title={item.basic.title} item={item.basic.items}/>:console.log('test')
-					
-					
-						
-				))
-			}
+		<section id="planes" class="bg-white text-black pt-12 grid gap-24 place-items-center">
+			<div class="plan-container sm:w-3/5">
+				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Nuestros paquetes</h2>
+				<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8">
+				{
+					content?.map((item) => (
+						item.basic?
+							<Card title={item.basic.title}>
+								<Basic slot="list"/>
+							</Card>
+						:item.premium?
+							<Card title={item.premium.title}>
+								<Premium slot="list"/>
+							</Card>
+						:item.standar?
+							<Card title={item.standar.title}>
+								<Standar slot="list"/>
+							</Card>
+						: null
+							
+					))
+				}
+				</div>
+			</div>
+			<article class="py-12 w-full grid place-items-center bg-gray-100">
+				<div class="exclusive-pack sm:w-3/5">
+					<div class="exclusive-txt-content">
+						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Exclusive</h2>
+						<p class="max-w-3xl text-center js-scroll fade-in-bottom">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+					</div>
+					{
+						content?.map((item) => (
+							item.exclusive?
+								<Card title={item.exclusive.title}>
+									<Exclusive slot="list"/>
+								</Card>
+							:null
+						))
+					}
+				</div>
+			</article>
 		</section>
 		<section id="servicios" class="services-section bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
-		<ServicesCards
-		sectionTitle="Nuestros Servicios"
-		/>
+			<ServicesCards
+			sectionTitle="Nuestros Servicios"
+			/>
 		</section>
 		<section id="contacto">
 			<Form

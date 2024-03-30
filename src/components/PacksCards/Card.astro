@@ -3,16 +3,13 @@ import Button from '../Button/Button.astro';
 
 interface Props{
     title: string;
-    item: string;
 }
-const {title, item} = Astro.props
+const {title} = Astro.props
 ---
 
 <div class="plan-card bg-gray-100 p-8 shadow-md w-96 md:w-80 md:h-full grid gap-4 js-scroll slide-left scrolled">
-    <h3>{title}</h3>
-    <ul>
-        {item}
-    </ul>
+    <h3 class="text-xl font-extrabold mb-4 text-center md:hover:relative md:hover:z-10 md:hover:rounded-md md:hover:shadow-[3px_4px_6px_1px_rgba(0, 0, 0, 0.55] md:hover:scale-105 md:hover:transition md:hover:ease-in-out  md:hover:cursor-pointer">{title}</h3>
+    <slot name="list"/>
     
     <Button
     value="Contratar"
