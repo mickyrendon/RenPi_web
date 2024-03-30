@@ -33,7 +33,7 @@ const {nosotros,planes, servicios, contacto} = Astro.props
 
     </a>
 
-    <ul class="hidden md:w-auto md:flex md:justify-between md:items-center md:gap-8">
+    <ul class="hidden menu-desktop md:w-auto md:flex md:justify-between md:items-center md:gap-8">
         <a href="#nosotros" >
             <li>{nosotros}</li>
         </a>
@@ -57,6 +57,17 @@ const {nosotros,planes, servicios, contacto} = Astro.props
     }
     .menu-btn--down{
         background-image: url('../../../../public/assets/menu-dropdown.svg');
+    }
+    .menu-desktop li{
+        transition: ease-out 1s;
+    }
+    .menu-desktop li:hover{
+        /* opacity: 0.9; */
+        background-image: linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246));
+        /* linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248)); */
+        background-clip:text;
+        color: transparent;
+        transition: ease-in 200ms;
     }
 </style>
 

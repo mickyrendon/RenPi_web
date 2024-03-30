@@ -9,6 +9,7 @@ import ServicesCards from "../components/ServicesCards/ServicesCards.astro";
 import Form from "../components/Form/Form.astro";
 import Footer from "../components/Footer/Footer.astro"
 import Basic from "../components/PacksCards/Basic.astro";
+import Chat from "../components/ChatBtn.astro"
 
 import {content} from '../components/PacksCards/content'
 import Premium from "../components/PacksCards/Premium.astro";
@@ -28,11 +29,12 @@ import Standar from "../components/PacksCards/Standar.astro";
 		<Video/>
 	</header>
 	<main>
+		<Chat/>
 		<Us id="nosotros"/>
 		<section id="planes" class="bg-white text-black pt-12 grid gap-24 place-items-center">
 			<div class="plan-container sm:w-3/5">
-				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Nuestros paquetes</h2>
-				<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8">
+				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll scrolled fade-in">Nuestros paquetes</h2>
+				<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8 px-4">
 				{
 					content?.map((item) => (
 						item.basic?
@@ -54,10 +56,10 @@ import Standar from "../components/PacksCards/Standar.astro";
 				</div>
 			</div>
 			<article class="py-12 w-full grid place-items-center bg-gray-100">
-				<div class="exclusive-pack sm:w-3/5">
+				<div class="grid place-items-center gap-y-8 sm:w-3/5 px-4 md:grid-cols-2">
 					<div class="exclusive-txt-content">
-						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Exclusive</h2>
-						<p class="max-w-3xl text-center js-scroll fade-in-bottom">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll scrolled fade-in">Exclusive</h2>
+						<p class="max-w-3xl text-center js-scroll scrolled fade-in-bottom text-balance text-[#030508] md:text-start">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
 					</div>
 					{
 						content?.map((item) => (

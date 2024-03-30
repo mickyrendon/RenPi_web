@@ -9,10 +9,10 @@ interface Props {
 const {title, text, nombre, email, content} = Astro.props
 ---
 <div class="mx-auto text-center bg-white py-12">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4 js-scroll fade-in">{title}</h2>
-    <h3 class=" text-lg md:text-xl mb-8 js-scroll fade-in-bottom">{text}</h3>
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 js-scroll scrolled fade-in">{title}</h2>
+    <h3 class=" text-lg md:text-xl mb-8 js-scroll scrolled fade-in-bottom">{text}</h3>
     <!-- Formulario de contacto -->
-    <form target="_blank" action="https://formsubmit.co/contacto.renpi@gmail.com" method="POST" class="p-4 max-w-md mx-auto js-scroll fade-in-bottom ">
+    <form target="_blank" action="https://formsubmit.co/contacto.renpi@gmail.com" method="POST" class="p-4 max-w-md mx-auto js-scroll scrolled fade-in-bottom ">
       <!-- Nombre -->
       <div class="mb-4">
         <label class="block font-semibold mb-2 text-start" for="nombre">{nombre}</label>

@@ -16,3 +16,24 @@ const {nosotros,planes, servicios, contacto} = Astro.props
         <li>{contacto}</li>
     </ul>
 </div>
+<style>
+    .menu-mobile{
+    padding: 2rem;
+    width: 100%;
+    height: max-content;
+    display: block;
+    position: absolute;
+    top: 4rem;
+    /* background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99)); */
+    /* transition:0.2s; */
+    animation: fadeIn 0.3s ease-in-out;
+    }
+    .menu-mobile.hidde{
+    animation: fadeOut 0.3s ease-in-out;
+    }
+    .menu-mobile ul li a{
+    width: 100%;
+    display: inline-block;
+    color: white;
+    }
+</style>

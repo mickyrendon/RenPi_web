@@ -6,9 +6,9 @@ interface Props{
 const {instagram, facebook} = Astro.props
 ---
 
-<nav class="flex flex-col-reverse justify-between w-auto gap-2 my-8">
-    <a href="https://www.instagram.com/renpi_digital/" class="inline-flex opacity-80 gap-2">
-        <svg class="ml-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<nav class="flex md:flex-col-reverse justify-center w-auto gap-2 my-8">
+    <a href="https://www.instagram.com/renpi_digital/" class="inline-flex md:flex md:w-full opacity-80 gap-2 w-1/2">
+        <svg class="ml-4 md:ml-0" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
             <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
@@ -17,8 +17,8 @@ const {instagram, facebook} = Astro.props
         {instagram}
     </a>
     <!-- FIXME. cambiar el path por el correcto -->
-    <a href="https://web.facebook.com/profile.php?id=61551006542903" class="inline-flex opacity-80 gap-2">
-        <svg class="ml-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <a href="https://web.facebook.com/profile.php?id=61551006542903" class="inline-flex md:flex md:w-full  opacity-80 gap-2 w-1/2">
+        <svg class="ml-4 md:ml-0" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
         </svg>

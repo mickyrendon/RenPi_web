@@ -7,8 +7,8 @@ interface Props{
 const {title} = Astro.props
 ---
 
-<div class="plan-card bg-gray-100 p-8 shadow-md w-96 md:w-80 md:h-full grid gap-4 js-scroll slide-left scrolled">
-    <h3 class="text-xl font-extrabold mb-4 text-center md:hover:relative md:hover:z-10 md:hover:rounded-md md:hover:shadow-[3px_4px_6px_1px_rgba(0, 0, 0, 0.55] md:hover:scale-105 md:hover:transition md:hover:ease-in-out  md:hover:cursor-pointer">{title}</h3>
+<div class="plan-card bg-gray-100 p-8 shadow-md md:w-80 md:h-full grid place-items-center gap-4 js-scroll scrolled slide-left">
+    <h3 class="text-xl font-extrabold mb-4 text-center md:hover:relative md:hover:z-10 md:hover:rounded-md md:hover:shadow-[3px_4px_6px_1px_rgba(0, 0, 0, 0.55] md:hover:scale-105 md:hover:transition md:hover:ease-in-out js-scroll fade-in-bottom scrolled md:hover:cursor-pointer opacity-05">{title}</h3>
     <slot name="list"/>
     
     <Button
@@ -25,4 +25,54 @@ const {title} = Astro.props
         border-bottom: 2px rgba(40,40,40,0.35) solid;
         border-right: 2px rgba(40,40,40,0.35) solid;
     }
+    @media(min-width: 768px){
+    /* .logo{
+        width: 4rem;
+        background-color: white;
+        background-image: url('./assets/logotipo/logotipo.svg');
+        border-radius: 0.5rem;
+        transition: 1s;
+    } */
+    /* class for mediaquery match > 750 uses in js */
+    
+
+    #plans-section a, .cta, .submit-btn{
+        transition: ease-out 3ms;
+    }
+    #plans-section a:hover, .cta:hover, .submit-btn:hover{
+        opacity: 0.9;
+        background-image:linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246));
+        /* background-image: linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248)); */
+        /* outline: 2px solid black; */
+        /* outline:1px solid #0000006b; */
+        /* box-shadow: 0px 1px 3px 0px #000; */
+        transition: ease-in 80ms;
+    }
+    #contact-section .container{
+        max-width: 40%
+    }
+    .plan-card{
+        grid-template-rows: auto;
+        place-items: center;
+        transition: ease-out 200ms;
+    }
+    .plan-card:first-of-type{
+        transform: scale(0.9);
+    }
+    .plan-card:nth-of-type(2){
+        z-index: 4;
+    }
+    .plan-card:last-of-type{
+        transform: scale(0.9);
+    }
+    .plan-card:hover{
+        position: relative;
+        z-index: 6;
+        border-radius: 0.3rem;
+        box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.55);
+        transform: scale(1.01);
+        transition: ease-in 100ms;
+        cursor: pointer;
+    }
+}
 </style>

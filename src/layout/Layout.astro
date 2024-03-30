@@ -1,8 +1,9 @@
 ---
-interface Props{
+// globalThis.addEventListener("scroll", async () => { 
+//     const { handleScrollAnimation } = await import('./scrollAnimation')
+//     return handleScrollAnimation()
+// })
 
-}
-const {} = Astro.props
 ---
 <!-- TODO, revisar si el doctype va -->
 <!-- <!doctype html> -->
@@ -10,10 +11,24 @@ const {} = Astro.props
 	<head>
 		<meta charset="utf-8" />
         <!-- TODO, cambiar el favicon -->
-        <meta name="description" content="Astro description"/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        
+    <meta name="description" content="Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a lograr sus objetivos en línea"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <link rel="canonical" href="https://mickyrendon.github.io/RenPi/">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RenPi - Agencia Digital">
+    <meta property="og:url" content="https://mickyrendon.github.io/RenPi/">
+    <meta property="og:site_name" content="Agencia Digital">
+    <meta name="twitter:card" content="summary_large_image">
+  
 		<title>RenPi</title>
 	</head>
 	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black">
@@ -22,10 +37,211 @@ const {} = Astro.props
 </html>
 <style is:global>
     :root{
-		--color:#030508
+		--color:#030508;
     }
     html{
         color-scheme: dark light;
-		color: var(--color);
+		    color: var(--color);
     }
+      /* *{
+        scroll-behavior: smooth;
+    } */
+    /* reset video styles */
+    video{
+        width: fit-content;
+        height: fit-content;
+    }
+    /* .video-ctr video{
+        width:100%;
+        max-width:720px;
+        /* height:40rem; */
+        /* border-radius: 1rem; *
+    } */
+    a{
+        color:whitesmoke;
+    }
+    p{
+        font-size:medium;
+        max-width:56ch;
+        color:gainsboro ;
+    }
+
+    .services-ctr h2, .services-ctr h3{
+        color: whitesmoke;
+    }
+    /* cards styles */
+    .plan-card ul li{
+        padding: 0.5rem 0;
+        /* list-style: none; */
+        border-bottom: 1px solid gainsboro;
+
+    }
+    .scroll-animation {
+        opacity: 0; /* El texto comienza invisible */
+        animation: fadeInUp 3s ease forwards; /* Animación de entrada */
+    }
+    .plan-card{
+        grid-template-rows: 8rem 1fr repeat();
+        transition: ease-in-out 80ms;
+    }
+
+    /**Styling scrollable elements*/
+
+    .js-scroll {
+        opacity: 0;
+        transition: opacity 500ms;
+      }
+      
+      .js-scroll.scrolled {
+        opacity: 1;
+      }
+      
+      .scrolled.fade-in {
+        animation: fade-in 1s ease-in-out both;
+      }
+      
+      .scrolled.fade-in-bottom {
+        animation: fade-in-bottom 1s ease-in-out both;
+      }
+      
+      .scrolled.slide-left {
+        animation: slide-in-left 1s ease-in-out both;
+      }
+      
+      .scrolled.slide-right {
+        animation: slide-in-right 1s ease-in-out both;
+      }
+    /* keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            /* opacity: 0; */
+            transform: translateY(20px); /* Mueve el texto hacia abajo al inicio */
+        }
+        100% {
+            /* opacity: 1; */
+            transform: translateY(0); /* Muestra el texto en su posición original */
+        }
+    }
+    @keyframes slide-in-left {
+        0% {
+          -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        /* 100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        } */
+      }
+      
+      @keyframes slide-in-right {
+        0% {
+          -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        /* 100% {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+        } */
+      }
+      
+      @keyframes fade-in-bottom {
+        0% {
+          -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        /* 100% {
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+          opacity: 1;
+        } */
+      }
+      
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      /* preloader animation */
+      /* Definir la animación */
+    @keyframes bounce-in-out {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      
+      /* Aplicar la animación al elemento */
+    /* Definir la animación */
+    /* @keyframes bounce-in-out {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      
+      /* Aplicar la animación al elemento *
+      .element{
+        animation: bounce-in-out 2s infinite;
+      }
+      */
+      /* Definir la animación */
+    @keyframes opacidad {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      /* Aplicar la animación al elemento */
+      .element{
+        animation-name: opacidad;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
 </style>
