@@ -1,10 +1,3 @@
----
-// globalThis.addEventListener("scroll", async () => { 
-//     const { handleScrollAnimation } = await import('./scrollAnimation')
-//     return handleScrollAnimation()
-// })
-
----
 <!-- TODO, revisar si el doctype va -->
 <!-- <!doctype html> -->
 <html lang="es" class="scroll-smooth">
@@ -29,12 +22,18 @@
     <meta property="og:site_name" content="Agencia Digital">
     <meta name="twitter:card" content="summary_large_image">
   
-		<title>RenPi</title>
+		<title>RenPi - Agencia Digital</title>
 	</head>
-	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black">
+	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black" >
         <slot/>
 	</body>
 </html>
+<script>
+  globalThis.addEventListener("scroll", async () => { 
+      const { handleScrollAnimation } = await import('./scrollAnimation')
+      return handleScrollAnimation()
+  })
+</script>
 <style is:global>
     :root{
 		--color:#030508;

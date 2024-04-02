@@ -1,0 +1,14 @@
+<div class="preloader w-screen h-screen fixed top-0 z-30 bg-gradient-to-l from-gray-700 via-gray-900 to-black overflow-hidden animate__animated">
+    <div class="w-full h-full grid place-items-center">
+        <figure class="w-auto h-auto flex flex-col items-center">
+            <img src="../../../public/assets/logotipo/logotipo.svg" alt="preloader-img" class="preloader-img w-40 h-80 md:w-60 animate-pulse">
+        </figure>
+    </div>
+</div>
+
+<script>
+    globalThis.addEventListener('load', async () => {
+        const { deleteLoader } = await import('./preloader')
+        return deleteLoader()
+    })
+</script>
