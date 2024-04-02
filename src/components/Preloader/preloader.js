@@ -18,7 +18,6 @@ export const deleteLoader = () => {
             loaderCtr.classList.add('hidden')
             body.classList.remove('overflow-hidden')
         }, 300)
-        // TODO, agregar la url de la img del preloader desde js
         hiddenElements.forEach(e => { return e.classList.remove('hidden') })
         
         const arr =  [...loaderCtr.childNodes]
