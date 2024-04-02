@@ -1,4 +1,7 @@
 ---
+import SocialMediaBtns from "../../Footer/SocialMediaBtns.astro";
+import Logo from "../../Logo/Logo.astro";
+
 interface Props{
     nosotros:string;
     planes:string;
@@ -8,32 +11,53 @@ interface Props{
 const {nosotros,planes, servicios, contacto} = Astro.props
 ---
 
-<div>
-    <ul>
-        <li>{nosotros}</li>
-        <li>{planes}</li>
-        <li>{servicios}</li>
-        <li>{contacto}</li>
+<div 
+class="menu-mobile hidden flex-shrink p-8 w-full h-screen max-h-max absolute top-16 z-10 bg-gradient-to-l from-gray-700 via-gray-900 to-black"
+>
+    <ul class="flex-1">
+        <li>
+            <a href="#nosotros">
+                {nosotros}
+            </a>
+        </li>
+        <li>
+            <a href="#planes">
+                {planes}
+            </a>
+        </li>
+        <li>
+            <a href="#servicios">
+                {servicios}
+            </a>
+        </li>
+        <li>
+            <a href="#contacto">
+                {contacto}
+            </a>
+        </li>
     </ul>
+    <div class="px-16 fixed bottom-[40px] left-0 flex flex-col-reverse justify-center text-white w-full">
+        <Logo 
+        description="potenciando tu presencia en línea"
+        />
+        <SocialMediaBtns/
+        instagram="@renpi_digital"
+        facebook="RenPi"
+        >
+    </div>
 </div>
 <style>
     .menu-mobile{
-    padding: 2rem;
-    width: 100%;
-    height: max-content;
-    display: block;
-    position: absolute;
-    top: 4rem;
-    /* background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99)); */
-    /* transition:0.2s; */
-    animation: fadeIn 0.3s ease-in-out;
+        animation: fadeIn 0.3s ease-in-out;
     }
     .menu-mobile.hidde{
-    animation: fadeOut 0.3s ease-in-out;
+        animation: fadeOut 0.3s ease-in-out;
     }
     .menu-mobile ul li a{
+    margin:1rem 0;
     width: 100%;
     display: inline-block;
+    text-align: center;
     color: white;
     }
 </style>

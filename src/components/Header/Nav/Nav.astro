@@ -1,4 +1,5 @@
 ---
+import MenuMobile from "./MenuMobile.astro"
 interface Props{
     nosotros:string;
     planes:string;
@@ -7,56 +8,63 @@ interface Props{
 }
 const {nosotros,planes, servicios, contacto} = Astro.props
 
-// const menuEvent = (e) => {
-//     const menuM = document.querySelector('.menu-mobile')
-    
-//     console.log(e.target.tagName)
-
-//     e.target.classList.contains('menu-m-btn')
-//     ?(
-//         menuM.classList.toggle('hidde'),
-//         e.target.classList.toggle('menu-m-icon-rollup'),
-//         e.target.classList.toggle('menu-m-icon-dropdown')
-//     ): e.target.tagName === 'A'
-//     ?(
-//         menuM.classList.toggle('hidde')
-//     ): console.log('no funciona la lista' + e.target.tagName)
-
-//     e.stopPropagation()
-// }
 ---
 
 <nav class="p-4 sticky top-0 z-10 w-full flex justify-between bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white">
     <a href="#">
         <!-- <slot name="logo" class="w-8 h-8"/> -->
-    	<img src="../../../../public/assets/logotipo/logotipo-circle.svg" alt="logo" slot="logo" class="w-8 h-8">
+    	<img src="/assets/logotipo/logotipo-circle.svg" alt="logo" slot="logo" class="w-8 h-8">
 
     </a>
 
     <ul class="hidden menu-desktop md:w-auto md:flex md:justify-between md:items-center md:gap-8">
-        <a href="#nosotros" >
-            <li>{nosotros}</li>
-        </a>
-        <a href="#planes" >
-            <li>{planes}</li>
-        </a>
-        <a href="#servicios" >
-            <li>{servicios}</li>
-        </a>
-        <a href="#contacto" >
-            <li>{contacto}</li>
-        </a>
+        <li>
+            <a href="#nosotros">
+                {nosotros}
+            </a>
+        </li>
+        <li>
+            <a href="#planes">
+                {planes}
+            </a>
+        </li>
+        <li>
+            <a href="#servicios">
+                {servicios}
+            </a>
+        </li>
+        <li>
+            <a href="#contacto">
+                {contacto}
+            </a>
+        </li>
     </ul>
     <!--TODO, checkear que funcione onclick=`${menuEvent(e)}` -->
-    <button class="menu-btn w-8 h-8 block bg-center bg-no-repeat bg-contain md:hidden lg:hidden" ></button>
+    <button 
+    id="menu-mobile-btn"
+    class="menu-btn w-8 h-8 block bg-center bg-no-repeat bg-contain md:hidden lg:hidden transition-all" 
+    ></button>
 </nav>
+<MenuMobile
+nosotros="Nosotros"
+planes="Planes"
+servicios="Servicios"
+contacto="Contacto"
+/>
+<script>
+    import {menuEvent} from "./menuMobile"
+
+    const body = document.querySelector('body')
+    body.addEventListener('click', menuEvent, false)
+</script>
 <style>
-    /* TODO, checkear las rutas al momento de compilar */
     .menu-btn{
-        background-image: url('../../../../public/assets/menu-rollup.svg');
+        background-image: url('/assets/menu-rollup.svg');
+        /* background-image: url('../../../../public/assets/menu-rollup.svg'); */
     }
     .menu-btn--down{
-        background-image: url('../../../../public/assets/menu-dropdown.svg');
+        background-image: url('/assets/menu-dropdown.svg');
+        /* background-image: url('../../../../public/assets/menu-dropdown.svg'); */
     }
     .menu-desktop li{
         transition: ease-out 1s;

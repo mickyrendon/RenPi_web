@@ -1,0 +1,17 @@
+---
+interface Props {
+    description: string;
+}
+const {description} = Astro.props
+---
+
+<figure class="flex flex-col items-center pt-8 js-scroll scrolled fade-in">
+    <img 
+    src="/assets/logotipo/logotipo.svg"
+    alt="renpi-logo"
+    class="w-60 md:w-80"
+    >
+    <figcaption class="text-sm w-60 md:w-80 md:text-xl text-current text-center">
+        {description}
+    </figcaption>
+</figure>

@@ -3,7 +3,7 @@ export const deleteLoader = () => {
     const loaderCtr = document.querySelector('.preloader')
     const hiddenElements = [
         document.querySelector('header'),
-        document.querySelector('.preloader-img'),
+        // document.querySelector('.preloader-img'),
         document.querySelector('.chat'),
         document.querySelector('main'),
         document.querySelector('footer')
@@ -15,11 +15,11 @@ export const deleteLoader = () => {
         
         setTimeout(() => {
             loaderCtr.classList.remove('w-screen', 'h-screen', 'fixed', 'top-0', 'z-30', 'grid', 'place-items-center', 'bkg-main-black', 'ov-hidden', 'animate__fadeIn')
-            loaderCtr.classList.add('hidde')
+            loaderCtr.classList.add('hidden')
             body.classList.remove('overflow-hidden')
         }, 300)
         // TODO, agregar la url de la img del preloader desde js
-        hiddenElements.forEach(e => { return e.classList.remove('hidde') })
+        hiddenElements.forEach(e => { return e.classList.remove('hidden') })
         
         const arr =  [...loaderCtr.childNodes]
         

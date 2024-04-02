@@ -1,5 +1,6 @@
 ---
 import Button from '../Button/Button.astro'
+import Logo from '../Logo/Logo.astro';
 
 interface Props{
     id: string;
@@ -12,16 +13,7 @@ id={id}
 class="flex justify-center bg-gray-100 pb-12 md:h-[500px]"
 >
     <div class="grid place-items-center gap-8 text-center w-10/12 md:grid-cols-2 md:pt-16">
-        <figure class="flex flex-col items-center pt-8 js-scroll scrolled fade-in">
-            <img 
-            src="../../../public/assets/logotipo/logotipo.svg"
-            alt="renpi-logo"
-            class="w-80 "
-            >
-            <figcaption class="text-lg md:text-xl">
-                potenciando tu presencia en línea
-            </figcaption>
-        </figure>
+        <Logo description='potenciando tu presencia en línea'/>
         <div class="flex flex-col gap-y-8">
             <p class="max-w-3xl text-center js-scroll fade-in-bottom scrolled text-balance text-[#030508] text-lg md:text-start">
                 Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a alcanzar sus objetivos en línea. Nuestro equipo está compuesto por expertos en <b class="opacity-80">Diseño y Desarrollo web</b>, <b class="opacity-80">Marketing Digital</b> y <b class="opacity-80">Fotografía</b>, trabajamos juntos para ofrecer soluciones personalizadas y efectivas. 
