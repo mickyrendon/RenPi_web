@@ -11,10 +11,10 @@ export const deleteLoader = () => {
     
     if(loaderCtr.childElementCount > 0){
         
-        loaderCtr.classList.add('animate__fadeOut')
+        loaderCtr.classList.add('animate-pulse')
         
         setTimeout(() => {
-            loaderCtr.classList.remove('w-screen', 'h-screen', 'fixed', 'top-0', 'z-30', 'grid', 'place-items-center', 'bkg-main-black', 'ov-hidden', 'animate__fadeIn')
+            loaderCtr.classList.remove('w-screen', 'h-screen', 'fixed', 'top-0', 'z-30', 'grid', 'place-items-center', 'bkg-main-black', 'ov-hidden', 'animate-pulse')
             loaderCtr.classList.add('hidden')
             body.classList.remove('overflow-hidden')
         }, 300)

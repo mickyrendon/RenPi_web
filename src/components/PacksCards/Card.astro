@@ -7,8 +7,8 @@ interface Props{
 const {title} = Astro.props
 ---
 
-<div class="plan-card bg-gray-100 p-8 shadow-md md:w-80 md:h-full grid place-items-center gap-4 js-scroll   slide-left">
-    <h3 class="text-xl font-extrabold mb-4 text-center md:hover:relative md:hover:z-10 md:hover:rounded-md md:hover:shadow-[3px_4px_6px_1px_rgba(0, 0, 0, 0.55] md:hover:scale-105 md:hover:transition md:hover:ease-in-out js-scroll fade-in-bottom   md:hover:cursor-pointer opacity-05">{title}</h3>
+<div class="plan-card">
+    <h3 class="text-xl md:text-3xl font-extrabold mb-4 text-center">{title}</h3>
     <slot name="list"/>
     
     <Button
@@ -17,44 +17,25 @@ const {title} = Astro.props
 </div>
 <style>
     .plan-card{
+        padding: 2rem;
+        display: grid;
+        place-items: center;
+        gap:2rem;
         background: linear-gradient(to right top, rgba(16, 46, 75, 0.925), rgba(60, 69, 88, 0.966), rgba(45, 73, 102, 0.993));
-        border-radius: 0.3rem;
-        color: whitesmoke;
         backdrop-filter: blur(5px);
+        color: whitesmoke;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         border: 2px rgba(255,255,255,0.4) solid;
         border-bottom: 2px rgba(40,40,40,0.35) solid;
         border-right: 2px rgba(40,40,40,0.35) solid;
+        border-radius: 0.3rem;
+        transition: all 200ms ease-in-out;
     }
     @media(min-width: 768px){
-    /* .logo{
-        width: 4rem;
-        background-color: white;
-        background-image: url('./assets/logotipo/logotipo.svg');
-        border-radius: 0.5rem;
-        transition: 1s;
-    } */
-    /* class for mediaquery match > 750 uses in js */
     
-
-    #plans-section a, .cta, .submit-btn{
-        transition: ease-out 3ms;
-    }
-    #plans-section a:hover, .cta:hover, .submit-btn:hover{
-        opacity: 0.9;
-        background-image:linear-gradient(to right, rgb(56, 189, 248), rgb(59, 130, 246));
-        /* background-image: linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248)); */
-        /* outline: 2px solid black; */
-        /* outline:1px solid #0000006b; */
-        /* box-shadow: 0px 1px 3px 0px #000; */
-        transition: ease-in 80ms;
-    }
-    #contact-section .container{
-        max-width: 40%
-    }
     .plan-card{
-        grid-template-rows: auto;
-        place-items: center;
-        transition: ease-out 200ms;
+        width:20rem;
+        height: 100%;
     }
     .plan-card:first-of-type{
         transform: scale(0.9);
@@ -69,9 +50,10 @@ const {title} = Astro.props
         position: relative;
         z-index: 6;
         border-radius: 0.3rem;
-        box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.55);
-        transform: scale(1.01);
-        transition: ease-in 100ms;
+        /* box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.55); */
+        /* transform: scale(1.01); */
+        transform: translateY(-10px);
+        /* transition: ease-in 200ms; */
         cursor: pointer;
     }
 }

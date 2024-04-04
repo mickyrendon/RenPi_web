@@ -4,9 +4,10 @@ interface Props{
 }
 const {value} = Astro.props
 ---
-<!-- TODO, animaciones del fade -->
-<button 
-class="max-w-fit self-center bg-gradient-to-r from-sky-400 to-blue-500 text-white py-2 px-4 rounded-md inline-block js-scroll fade-in-bottom   text-center md:hover:shadow-lg md:hover:transition-all scale-125"
+<a 
+href="https://api.whatsapp.com/send?phone=56930575930" 
+target="_blank"
+class="max-w-fit self-center bg-gradient-to-r from-sky-400 to-blue-500 text-white py-2 px-4 rounded-md inline-block text-center md:hover:shadow-lg md:hover:transition-all scale-125"
 >
     {value}
-</button>
+</a>

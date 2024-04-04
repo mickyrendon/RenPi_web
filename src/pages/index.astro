@@ -1,6 +1,6 @@
 ---
 import Layout from "../layout/Layout.astro";
-import Preloader from "../components/Preloader/Preloader.astro";
+// import Preloader from "../components/Preloader/Preloader.astro";
 import Nav from "../components/Header/Nav/Nav.astro";
 import Video from "../components/Header/Video.astro";
 import Us from "../components/UsSection/Us.astro";
@@ -20,7 +20,7 @@ import {content} from '../components/PacksCards/content'
 
 ---
 <Layout>
-	<Preloader/>
+	<!-- <Preloader/> -->
 	<header>
 		<Nav 
 		nosotros="Nosotros"
@@ -36,7 +36,7 @@ import {content} from '../components/PacksCards/content'
 		<Us id="nosotros"/>
 		<section id="planes" class="bg-white text-black pt-12 grid gap-24 place-items-center">
 			<div class="plan-container sm:w-3/5">
-				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll   fade-in">Nuestros paquetes</h2>
+				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Nuestros paquetes</h2>
 				<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8 px-4">
 				{
 					content?.map((item) => (
@@ -90,7 +90,7 @@ import {content} from '../components/PacksCards/content'
 			content="Mensaje"
 			/>
 		</section>
-		<footer>
+		<footer class="md:pt-16">
 			<Footer/>
 		</footer>
 	</main>
