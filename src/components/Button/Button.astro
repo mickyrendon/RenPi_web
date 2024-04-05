@@ -1,11 +1,12 @@
 ---
 interface Props{
     value: string;
+    url: string;
 }
-const {value} = Astro.props
+const {value, url} = Astro.props
 ---
 <a 
-href="https://api.whatsapp.com/send?phone=56930575930" 
+href={url} 
 target="_blank"
 class="max-w-fit self-center bg-gradient-to-r from-sky-400 to-blue-500 text-white py-2 px-4 rounded-md inline-block text-center md:hover:shadow-lg md:hover:transition-all scale-125"
 >
