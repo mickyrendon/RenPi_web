@@ -3,7 +3,6 @@ export const menuEvent = (e) => {
     const menuM = document.querySelector('.menu-mobile')
     const menuBtn = document.querySelector('#menu-mobile-btn')
     
-    // FIXME, corregir el link btn del desktop
     // seleccionando el btn
     e.target.id === ('menu-mobile-btn')
     ?(
@@ -17,7 +16,7 @@ export const menuEvent = (e) => {
         menuM.classList.toggle('hidden'),
         menuBtn.classList.remove('menu-btn--down'),
         menuBtn.classList.add('menu-btn')
-    ): console.log('no funciona la lista' + e.target.tagName)
+    ): null
 
     e.stopPropagation()
 }

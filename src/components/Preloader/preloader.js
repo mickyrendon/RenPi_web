@@ -18,7 +18,7 @@ export const deleteLoader = () => {
             loaderCtr.classList.add('hidden')
             body.classList.remove('overflow-hidden')
         }, 300)
-        hiddenElements.forEach(e => { return e.classList.remove('hidden') })
+        hiddenElements.forEach(e => { return e?.classList.remove('hidden') })
         
         const arr =  [...loaderCtr.childNodes]
         
