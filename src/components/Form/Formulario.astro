@@ -1,10 +1,17 @@
 <form 
 name="contact"
 method="POST" 
+netlify-honeypot="bot-field"
+data-netlify-recaptcha="true"
 data-netlify="true"
 class="p-4 w-11/12 max-w-md mx-auto js-scroll fade-in-bottom"
 >
   <!-- {message && <p className="message">{message}</p>} -->
+  <div class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </div>
   <div class="mb-4">
     <label class="block font-semibold mb-2 text-start" for="nombre">Nombre</label>
     <input 
@@ -35,6 +42,7 @@ class="p-4 w-11/12 max-w-md mx-auto js-scroll fade-in-bottom"
     placeholder="Deja tu mensaje" 
     required/>
   </div>
+  <div data-netlify-recaptcha="true"></div>
   <label class="text-center w-full h-auto" for="submit"></label>
   <input 
   type="submit" 
