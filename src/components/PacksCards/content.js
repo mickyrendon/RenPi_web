@@ -1,17 +1,17 @@
 export const content = [
     {
         basic:{
-            title: 'Basic'
+            title: 'Fotografía'
         }
     },
     {
         standar: {
-            title: 'Standar'
+            title: 'Diseño y Desarrollo Web'
         }
     },
     {
         premium:{
-            title: 'Premium',
+            title: 'Community Management',
         }
     },
     {
