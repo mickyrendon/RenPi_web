@@ -9,65 +9,13 @@ interface Props {
 const {title, text} = Astro.props
 ---
 <div class="mx-auto flex flex-col justify-center text-center bg-white py-12">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center js-scroll fade-in">{title}</h2>
-    <h3 class="mx-auto text-lg md:text-xl mb-8 js-scroll text-center fade-in-bottom w-11/12">{text}</h3>
+    <div class="w-11/12 max-w-md mx-auto flex justify-center flex-col">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center js-scroll fade-in">{title}</h2>
+      <h3 class="mx-auto text-lg md:text-xl mb-8 js-scroll text-center fade-in-bottom w-11/12">{text}</h3>
+    </div>
     <!-- Formulario de contacto -->
 			<ContactUs/>
+</div>
 
-
-<!-- <script>
-
-      const form = document.querySelector('form') as HTMLFormElement;
-
-      form.addEventListener('submit', (event: Event) => {
-        event.preventDefault();
-        const btn = document.querySelector('#spinner') as HTMLInputElement;
-        btn.classList.add('animate-spin')
-        btn.classList.remove('hidden')
-        form.reset();
-        // const data: FormData = new FormData(form);
-        // const data = 
-      //   const nombre = document.getElementById('nombre') as HTMLInputElement;
-      // const email = document.getElementById('email') as HTMLInputElement;
-      // const mensaje = document.getElementById('mensaje') as HTMLTextAreaElement;
-
-      //   const data = {
-      //   nombre: nombre.value,
-      //   email: email.value,
-      //   mensaje: mensaje.value,
-      // };
-
-      // 
-
-        // // Envío de datos a FormSubmit
-        // fetch('https://formsubmit.co/contacto.renpi@gmail.com', {
-        // // fetch('https://formsubmit.co/api/get-apikey/contacto.renpi@gmail.com', {
-        //   method: 'POST',
-        //   body: data,
-        //   headers: {
-        //     'Content-Type': 'application/json'
-        //   }
-
-        // })
-        //   .then((response) => {
-        //     if (response.ok) {
-        //       alert('Mensaje enviado correctamente');
-        //       // console.log(data);
-        //       btn.classList.remove('animate-spin')
-        //       btn.classList.add('hidden')
-        //       form.reset();
-        //     } else {
-        //       btn.classList.remove('animate-spin')
-        //       alert('Error al enviar el mensaje');
-        //     }
-        //   })
-        //   .catch((error) => {
-        //     console.error(error);
-        //     alert('Error al enviar el mensaje');
-        //   });
-      });
-
-      
-</script> -->
 
     
