@@ -6,7 +6,7 @@ import Video from "../components/Header/Video.astro";
 import Us from "../components/UsSection/Us.astro";
 import Card from "../components/PacksCards/Card.astro";
 import Exclusive from "../components/PacksCards/Exclusive.astro";
-import ServicesCards from "../components/ServicesCards/ServicesCards.astro";
+import Metodology from "../components/Metodology/Metodology.astro";
 import Form from "../components/Form/Form.astro";
 import Footer from "../components/Footer/Footer.astro"
 import Basic from "../components/PacksCards/Basic.astro";
@@ -32,7 +32,7 @@ import {content} from '../components/PacksCards/content'
 		<!-- FIXME, padding card fotografia -->
 		<Chat/>
 		<Us id="nosotros"/>
-		<section id="planes" class="bg-white text-black pt-12 grid gap-24 place-items-center">
+		<section id="planes" class="bg-white text-black pt-24 grid gap-24 place-items-center">
 			<div class="plan-container sm:w-3/5">
 				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 js-scroll fade-in">Nuestros Servicios</h2>
 				<!-- TODO, agregar una frase complementaria -->
@@ -77,11 +77,12 @@ import {content} from '../components/PacksCards/content'
 			</article>
 		</section>
 		<section id="servicios" class="services-section bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
-			<ServicesCards
-			sectionTitle="Nuestros Servicios"
+			<Metodology
+			sectionTitle="Descubre cómo trabajamos"
+			paragraph="Diseño digital a la medida de tus necesidades"
 			/>
 		</section>
-		<section id="contacto">
+		<section id="contacto" class="pt-12">
 			<Form
 			title="¡Contacta con nosotros!"
 			text="Estamos listos para ayudarte a lograr tus objetivos digitales."

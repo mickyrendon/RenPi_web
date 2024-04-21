@@ -4,10 +4,12 @@ import {sContent} from './servicesContent'
 
 const servicesContent = sContent
 
+
 interface Props{
     sectionTitle: string;
+    paragraph: string;
 }
-const {sectionTitle} = Astro.props
+const {sectionTitle, paragraph} = Astro.props
 function impar(idx){
     const impar = idx % 2 !== 0
     
@@ -15,8 +17,13 @@ function impar(idx){
 }
 const impares = impar
 ---
+
+<!-- TODO, dry este componente para que reciba como props el array a renderizar -->
 <div class="services-ctr container mx-auto w-4/6 gap-8 grid">
-    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in  ">{sectionTitle}</h2>
+    <div class="grid place-items-center w-full">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 js-scroll fade-in">{sectionTitle}</h2>
+        <p class="text-base md:text-xl font-medium text-center mb-8 js-scroll fade-in opacity-90">{paragraph}</p>
+    </div>
     {
         servicesContent?.map((item, idx) => (
        

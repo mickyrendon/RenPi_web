@@ -9,20 +9,33 @@ const {title, paragraph, url, impar} = Astro.props
 ---
 <div 
 class:list={[
-    "grid place-items-center gap-6 md:flex md:flex-row md:justify-evenly md:items-center md:gap-8",
+    "grid place-items-center gap-6 md:flex md:flex-row md:justify-evenly md:items-center md:gap-8 relative",
     {
     "reverse": impar   
     }
 ]}
 >
-    <div class="card-img p-4 w-72 h-72 rounded-full  bg-slate-50 shadow-md shadow-gray-800 js-scroll   slide-left">
+    <div class="card-img p-4 w-72 h-72 rounded-full  bg-slate-50 shadow-md shadow-gray-800 js-scroll slide-left">
         <figure class="flex w-full h-full">
             <img src={url} alt={title} class="w-full">
         </figure>
     </div>
-    <div class="w-full md:w-2/5 js-scroll    slide-right">
-        <h3 class="text-xl mb-4 text-center font-bold md:text-start">{title}</h3>
-        <p class="text-md text-balance md:text-start">
+    <svg 
+    class="absolute top-[316px] left-[4px] md:left-auto js-scroll fade-in"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="#ffffff"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 6.66a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z" stroke-width="0" fill="currentColor" />
+    </svg>
+    <div class="w-full md:w-2/5 js-scroll slide-right md:pl-8 md:pr-8">
+        <h3 class="text-xl mb-4 text-center font-bold mx-auto md:text-start">{title}</h3>
+        <p class="content text-md text-center text-balance w-5/6 md:w-full mx-auto md:mx-0 md:text-start">
         {paragraph}
         </p>
     </div>  
