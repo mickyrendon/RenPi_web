@@ -1,0 +1,71 @@
+
+<!-- TODO, refactorizar el codigo -->
+<div id="animation-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative w-full h-56 overflow-hidden rounded-lg md:h-96 border-sm">
+         <!-- Item 1 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item="active">
+            <figure class="w-2/3 m-auto flex flex-col gap-4 rounded-lg shadow-md ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDp2UEo_bNn7XiVsxal_2A6LqGps3Lu76rQ&s" alt="fotografo-img" class="w-full m-auto h-[200px] object-cover rounded-t-lg">
+                <figcaption class="p-4 pt-0">
+                    Una fotografía de alta calidad puede ser la clave para captar la atención, transmitir emociones, contar historias, reforzar mensajes, aumentar la credibilidad, mejorar la experiencia del usuario y, en definitiva, alcanzar el éxito en tus proyectos digitales.
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-200 ease-linear border-md" data-carousel-item>
+            <figure class="w-2/3 m-auto flex flex-col gap-4 rounded-lg shadow-md ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDp2UEo_bNn7XiVsxal_2A6LqGps3Lu76rQ&s" alt="fotografia-corporativa" class="w-full m-auto h-[200px] object-cover rounded-t-lg">
+                <figcaption class="p-4 pt-0">
+                    <b>Fotografía corporativa:</b> El arte de comunicar la imagen profesional de una empresa. Retratos ejecutivos, eventos corporativos, instalaciones y productos cobran vida bajo la lente experta, reforzando la identidad y valores de la marca.
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <figure class="w-2/3 m-auto flex flex-col gap-4 rounded-lg shadow-md ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDp2UEo_bNn7XiVsxal_2A6LqGps3Lu76rQ&s" alt="fotografia-corporativa" class="w-full m-auto h-[200px] object-cover rounded-t-lg">
+                <figcaption class="p-4 pt-0">
+                    <b>Fotografía de eventos:</b> Inmortalizando momentos inolvidables. Bodas, fiestas, congresos y más se convierten en recuerdos tangibles gracias a la captura precisa de emociones, detalles y la atmósfera única de cada ocasión.
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <figure class="w-2/3 m-auto flex flex-col gap-4 rounded-lg shadow-md ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDp2UEo_bNn7XiVsxal_2A6LqGps3Lu76rQ&s" alt="fotografia-corporativa" class="w-full m-auto h-[200px] object-cover rounded-t-lg">
+                <figcaption class="p-4 pt-0">
+                    <b>Fotografía de arquitectura:</b> Un homenaje a las estructuras que nos rodean. Líneas, formas, texturas y la interacción con la luz se traducen en imágenes que resaltan la belleza y funcionalidad de edificios, espacios interiores y monumentos.
+                </figcaption>
+            </figure>
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-200 ease-linear" data-carousel-item>
+            <figure class="w-2/3 m-auto flex flex-col gap-4 rounded-lg shadow-md ">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDp2UEo_bNn7XiVsxal_2A6LqGps3Lu76rQ&s" alt="fotografia-corporativa" class="w-full m-auto h-[200px] object-cover rounded-t-lg">
+                <figcaption class="p-4 pt-0">
+                    <b>Fotografía de retrato:</b> Revelando la esencia de las personas. Rostros, expresiones y personalidades únicas se plasman en retratos que capturan la esencia de cada individuo, ideales para catálogos, portafolios o simplemente para atesorar recuerdos.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-dark dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-black/30 dark:bg-gray-800/30 group-hover:bg-black/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+<!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
+<script src="../../../node_modules/flowbite/dist/flowbite.min.js"></script>

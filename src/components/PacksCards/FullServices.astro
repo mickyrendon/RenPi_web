@@ -1,0 +1,61 @@
+---
+import Card from './Card.astro'
+import Basic from './Basic.astro'
+import Standar from './Standar.astro'
+import Premium from './Premium.astro'
+import Slider from '../Slider/Slider.astro'
+import {content} from './generalContent'
+---
+
+<article class="py-12 w-full grid place-items-center">
+    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+        {
+            content?.map((item) => (
+                item.basic?
+                    <Card title={item.basic.title}>
+                        <Basic slot="list"/>
+                    </Card>
+                :null
+            ))
+        }
+        <div class="w-full">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Fotografía</h2>
+            <Slider>
+            
+        </div>
+    </div>
+</article>
+<article class="py-12 w-full grid place-items-center bg-gray-100">
+    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+        <div class="exclusive-txt-content">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Diseño y Desarrollo Web</h2>
+            <p id="diseño-desarrollo" class="max-w-3xl text-center js-scroll fade-in-bottom text-pretty text-[#030508] md:text-start">Tu éxito digital comienza con un sitio web excepcional. En RenPi diseñamos y desarrollamos webs atractivas, fáciles de usar y preparadas para móviles. Te garantizamos velocidad, seguridad y optimización SEO para que tu marca brille online. ¡Contáctanos y construyamos tu presencia digital ganadora!</p>
+        </div>
+        {
+            content?.map((item) => (
+                item.standar?
+                    <Card title={item.standar.title}>
+                        <Standar slot="list"/>
+                    </Card>
+                :null
+            ))
+        }
+    </div>
+</article>
+<article class="py-12 w-full grid place-items-center">
+    <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
+        {
+            content?.map((item) => (
+                item.premium?
+                    <Card title={item.premium.title}>
+                        <Premium slot="list"/>
+                    </Card>
+                :null
+            ))
+        }
+        <div class="exclusive-txt-content">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Community Management</h2>
+            <p id="community-management" class="max-w-3xl text-center js-scroll fade-in-bottom text-pretty text-[#030508] md:text-start">En la era digital, las redes sociales son el trampolín perfecto para el éxito de tu emprendimiento. Te permiten conectar con miles de clientes potenciales, construir una marca sólida, generar leads y ventas, fidelizar a tu audiencia y obtener información valiosa para optimizar tu estrategia. No las descuides, invierte en un Community Management efectivo y lleva tu negocio al siguiente nivel. ¡Contáctanos y descubre cómo podemos ayudarte a alcanzar tus metas!</p>
+        </div>
+    </div>
+</article>

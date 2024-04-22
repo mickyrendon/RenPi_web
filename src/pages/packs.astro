@@ -2,9 +2,17 @@
 import Layout from "../layout/Layout.astro";
 import Preloader from "../components/Preloader/Preloader.astro";
 import Nav from "../components/Header/Nav/Nav.astro";
+import Slider from "../components/Slider/Slider.astro"
+import Card from "../components/PacksCards/Card.astro";
+import Basic from "../components/PacksCards/Basic.astro";
+import Premium from "../components/PacksCards/Premium.astro";
+import Standar from "../components/PacksCards/Standar.astro";
+import Exclusive from "../components/PacksCards/Exclusive.astro";
+import Form from "../components/Form/Form.astro";
 import Footer from "../components/Footer/Footer.astro";
 import Chat from "../components/ChatBtn.astro"
 import ServicesCards from "../components/ServicesCards/ServicesCards.astro";
+import { content, photography, communityManagement } from "../components/PacksCards/generalContent";
 
 ---
 
@@ -12,19 +20,103 @@ import ServicesCards from "../components/ServicesCards/ServicesCards.astro";
     <Preloader/>
 	<header class="mt-[64px]">
 		<Nav 
-		nosotros="Nosotros"
-		planes="Servicios"
-		servicios="Metodología"
+		nosotros="Fotografía"
+		servicios="Diseño y Desarrollo Web"
+		metodologia="Community Management"
 		contacto="Contacto"
+		nosotrosUrl="#fotografia"
+		serviciosUrl="#diseño-desarrollo"
+		metodologiaUrl="#community-management"
+		contactoUrl="#contacto2"
 		>
 		</Nav>
 	</header>
     <main>
 		<Chat/>
+		<div class="py-12 w-full grid place-items-center bg-gray-100">
+			<h1>Planes para todos los gustos</h1>
+			<p>conoce todos los servicios que podemos ofrecerte</p>
+		</div>
+		<section class="bg-white text-black pt-24 grid gap-24 place-items-center">
+			<article class="py-12 w-full grid place-items-center">
+				<div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+					{
+						content?.map((item) => (
+							item.basic?
+								<Card title={item.basic.title}>
+									<Basic slot="list"/>
+								</Card>
+							:null
+						))
+					}
+					<div class="exclusive-txt-content">
+						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Fotografía</h2>
+						<p id="fotografia" class="max-w-3xl text-center js-scroll fade-in-bottom text-pretty text-[#030508] md:text-start">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+					</div>
+				</div>
+			</article>
+			<article class="py-12 w-full grid place-items-center bg-gray-100">
+				<div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+					<div class="exclusive-txt-content">
+						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Diseño y Desarrollo Web</h2>
+						<p id="diseño-desarrollo" class="max-w-3xl text-center js-scroll fade-in-bottom text-pretty text-[#030508] md:text-start">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+					</div>
+					{
+						content?.map((item) => (
+							item.standar?
+								<Card title={item.standar.title}>
+									<Standar slot="list"/>
+								</Card>
+							:null
+						))
+					}
+				</div>
+			</article>
+				<article class="py-12 w-full grid place-items-center">
+					<div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
+						{
+							content?.map((item) => (
+								item.premium?
+									<Card title={item.premium.title}>
+										<Premium slot="list"/>
+									</Card>
+								:null
+							))
+						}
+						<div class="exclusive-txt-content">
+							<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Community Management</h2>
+							<p id="community-management" class="max-w-3xl text-center js-scroll fade-in-bottom text-pretty text-[#030508] md:text-start">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+						</div>
+					</div>
+				</article>
+			<article class="py-12 w-full grid place-items-center bg-gray-100">
+				<div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+					<div class="exclusive-txt-content">
+						<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll   fade-in">Exclusive</h2>
+						<p class="max-w-3xl text-center js-scroll   fade-in-bottom text-pretty text-[#030508] md:text-start">El servicio de paquete exclusivo ofrece una experiencia única y personalizada para tus necesidades comerciales. Con un enfoque centrado en el cliente, nuestro equipo de expertos trabajará contigo para diseñar estrategias digitales específicas que impulsen el éxito de tu negocio. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.</p>
+					</div>
+					{
+						content?.map((item) => (
+							item.exclusive?
+								<Card title={item.exclusive.title}>
+									<Exclusive slot="list"/>
+								</Card>
+							:null
+						))
+					}
+				</div>
+			</article>
+		</section>
         <ServicesCards
         sectionTitle="Conoce nuestros servicios"
         paragraph="lorem ipsum"
         />
+		<section id="contacto2" class="pt-12">
+			<Form
+			title="¡Contacta con nosotros!"
+			text="Estamos listos para ayudarte a lograr tus objetivos digitales."
+			/>
+		</section>
         <footer class="md:pt-16">
 			<Footer/>
 		</footer>

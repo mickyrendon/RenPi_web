@@ -5,15 +5,18 @@ import Nav from "../components/Header/Nav/Nav.astro";
 import Video from "../components/Header/Video.astro";
 import Us from "../components/UsSection/Us.astro";
 import Card from "../components/PacksCards/Card.astro";
+import FullServices from "../components/PacksCards/FullServices.astro";
+// import Slider from "../components/Slider/Slider.astro";
 import Exclusive from "../components/PacksCards/Exclusive.astro";
 import Metodology from "../components/Metodology/Metodology.astro";
 import Form from "../components/Form/Form.astro";
 import Footer from "../components/Footer/Footer.astro"
-import Basic from "../components/PacksCards/Basic.astro";
+// import Basic from "../components/PacksCards/Basic.astro";
 import Chat from "../components/ChatBtn.astro"
-import Premium from "../components/PacksCards/Premium.astro";
-import Standar from "../components/PacksCards/Standar.astro";
-import {content} from '../components/PacksCards/content'
+// import Premium from "../components/PacksCards/Premium.astro";
+// import Standar from "../components/PacksCards/Standar.astro";
+import {content} from '../components/PacksCards/generalContent'
+import MediumCardsServices from "../components/PacksCards/MediumCardsServices.astro";
 
 ---
 <Layout>
@@ -21,9 +24,13 @@ import {content} from '../components/PacksCards/content'
 	<header class="mt-[64px]">
 		<Nav 
 		nosotros="Nosotros"
-		planes="Servicios"
-		servicios="Metodología"
+		servicios="Servicios"
+		metodologia="Metodología"
 		contacto="Contacto"
+		nosotrosUrl="#nosotros"
+		serviciosUrl="#servicios"
+		metodologiaUrl="#metodologia"
+		contactoUrl="#contacto"
 		>
 		</Nav>
 		<Video/>
@@ -32,30 +39,19 @@ import {content} from '../components/PacksCards/content'
 		<!-- FIXME, padding card fotografia -->
 		<Chat/>
 		<Us id="nosotros"/>
-		<section id="planes" class="bg-white text-black pt-24 grid gap-24 place-items-center">
-			<div class="plan-container sm:w-3/5">
-				<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16 js-scroll fade-in">Nuestros Servicios</h2>
-				<!-- TODO, agregar una frase complementaria -->
-				<!-- <p></p> -->
-				<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8 px-4">
-				{
-					content?.map((item) => (
-						item.basic?
-							<Card title={item.basic.title}>
-								<Basic slot="list"/>
-							</Card>
-						:item.premium?
-							<Card title={item.premium.title}>
-								<Premium slot="list"/>
-							</Card>
-						:item.standar?
-							<Card title={item.standar.title}>
-								<Standar slot="list"/>
-							</Card>
-						: null
-							
-					))
-				}
+		<section id="servicios" class="bg-white text-black pt-24 grid gap-24 place-items-center">
+			<div class="plan-container w-full">
+				<div class="grid place-items-center w-full mb-8 md:mb-16">
+					<h2 class="text-3xl md:text-4xl font-bold text-centerjs-scroll mb-2 fade-in">Nuestros Servicios</h2>
+					<p class="text-base md:text-xl font-medium text-center text-black  js-scroll fade-in opacity-60">
+						Soluciones que te ayudaran a lograr tus objetivos en línea
+					</p>
+				</div>
+				<div class="md:block lg:hidden">
+					<MediumCardsServices/>
+				</div>
+				<div class="hidden lg:block">
+					<FullServices/>
 				</div>
 			</div>
 			<article class="py-12 w-full grid place-items-center bg-gray-100">
@@ -76,7 +72,7 @@ import {content} from '../components/PacksCards/content'
 				</div>
 			</article>
 		</section>
-		<section id="servicios" class="services-section bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
+		<section id="metodologia" class="services-section bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
 			<Metodology
 			sectionTitle="Descubre cómo trabajamos"
 			paragraph="Diseño digital a la medida de tus necesidades"
