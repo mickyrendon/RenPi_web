@@ -3,9 +3,10 @@ import Card from "./Card.astro";
 import Basic from "./Basic.astro";
 import Premium from "./Premium.astro";
 import Standar from "./Standar.astro";
+import Exclusive from "./Exclusive.astro"
 import { content } from "./generalContent";
 ---
-<div class="p-card-ctr grid grid-cols-1 place-items-center md:grid-cols-3 gap-8 px-4 md:w-11/12 md:m-auto">
+<div class="p-card-ctr grid grid-cols-1 mb-16 place-items-center md:grid-cols-3 gap-8 px-4 md:w-11/12 md:m-auto">
     {
         content?.map((item) => (
             item.basic?
@@ -21,7 +22,18 @@ import { content } from "./generalContent";
                     <Standar slot="list"/>
                 </Card>
             : null
-                
+        ))
+    }
+</div>
+<!-- FIXME, css y responsive -->
+<div>
+    {
+        content?.map((item) => (
+            item.exclusive?
+                    <Card title={item.exclusive.title}>
+                        <Exclusive slot="list"/>
+                    </Card>
+                :null
         ))
     }
 </div>
