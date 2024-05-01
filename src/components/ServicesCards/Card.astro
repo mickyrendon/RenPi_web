@@ -4,8 +4,9 @@ interface Props{
     paragraph: string;
     url: string;
     impar: boolean;
+    first: boolean;
 }
-const {title, paragraph, url, impar} = Astro.props
+const {title, paragraph, url, impar, first} = Astro.props
 ---
 <div 
 class:list={[
@@ -15,24 +16,35 @@ class:list={[
     }
 ]}
 >
-    <div class="card-img p-4 w-72 h-72 rounded-full  bg-slate-50 shadow-md shadow-gray-800 js-scroll slide-left">
+    <div class="card-img p-4 w-72 h-72 rounded-full  bg-slate-50 shadow-md shadow-gray-800 js-scroll slide-left ">
         <figure class="flex w-full h-full">
             <img src={url} alt={title} class="w-full">
         </figure>
     </div>
-    <svg 
-    class="absolute top-[316px] md:top-auto left-[4px] md:left-auto js-scroll fade-in"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    stroke-width="1.5"
-    stroke="#ffffff"
-    fill="none"
-    stroke-linecap="round"
-    stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 6.66a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z" stroke-width="0" fill="currentColor" />
-    </svg>
+    <div class="crono-ctr m-auto w-[3px] h-full flex flex-col align-center absolute left-4 md:left-auto">
+        <span class:list={[
+            "line absolute -top-28 w-0.5 md:w-full bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] md:left-1/2 js-scroll crono",
+            {
+            "first": first
+            }
+        ]}
+        >
+        </span>
+        <svg 
+        class="point absolute bottom-[0px] -left-2 js-scroll fade-in-p"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-5 6.66a2 2 0 0 0 -1.977 1.697l-.018 .154l-.005 .149l.005 .15a2 2 0 1 0 1.995 -2.15z" stroke-width="0" fill="currentColor" />
+        </svg>
+    </div>
+
     <div class="w-full md:w-2/5 js-scroll slide-right md:pl-8 md:pr-8">
         <h3 class="text-xl mb-4 text-center font-bold mx-auto md:text-start">{title}</h3>
         <p class="content text-md text-center text-balance w-5/6 md:w-full mx-auto md:mx-0 md:text-start">
@@ -41,6 +53,21 @@ class:list={[
     </div>  
 </div>  
 <style>
+    .first{
+        height: 90%!important;
+        top:-1rem !important;
+    }
+    .line{
+        height: 120%;
+        opacity: 0.6 !important;
+    }
+    .point{
+        background-color: whitesmoke;
+        border-radius: 100%;
+        box-shadow: 0px 0px 46px 8px rgba(245,245,245, 0.8);
+        transform: translateZ(0);
+        transition-delay: 500ms;
+    }
     @media (min-width: 768px) {
         .reverse {
             display: flex;

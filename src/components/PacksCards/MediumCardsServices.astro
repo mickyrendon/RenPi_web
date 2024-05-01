@@ -25,15 +25,21 @@ import { content } from "./generalContent";
         ))
     }
 </div>
-<!-- FIXME, css y responsive -->
-<div>
+<article class="pb-12 sm:py-12 sm:mt-16 w-full gap-8 grid place-items-center sm:bg-gray-100">
+    <div class="w-[450px] m-auto sm:flex flex-col gap-2 js-scroll fade-in-bottom hidden">
+        <!-- <ExclusiveCard/> -->
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-2 js-scroll fade-in">Exclusive</h2>
+        <p class="text-black text-balance text-center">
+            El servicio de paquete exclusivo ofrece una <b>experiencia única y personalizada</b> para tus necesidades comerciales. Este paquete exclusivo está diseñado para adaptarse a tus necesidades y presupuesto, brindándote una solución integral y efectiva para impulsar tu presencia en línea.
+        </p>
+    </div>
     {
         content?.map((item) => (
             item.exclusive?
-                    <Card title={item.exclusive.title}>
-                        <Exclusive slot="list"/>
-                    </Card>
-                :null
+                <Card title={item.exclusive.title}>
+                    <Exclusive slot="list"/>
+                </Card>
+            :null
         ))
     }
-</div>
+</article> 

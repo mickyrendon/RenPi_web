@@ -7,7 +7,7 @@ interface Props{
 const {title} = Astro.props
 ---
 
-<div class="plan-card">
+<div class="plan-card js-scroll slide-left">
     <h3 class="text-2xl md:text-3xl font-bold mb-4 text-center opacity-90">{title}</h3>
     <slot name="list"/>
     <Button
@@ -34,29 +34,37 @@ const {title} = Astro.props
         transition: all 200ms ease-in-out;
     }
     @media(min-width: 768px){
-    
-    .plan-card{
-        width:20rem;
-        height: 648px;
+        .plan-card{
+            height: 648px;
+        }
     }
-    .plan-card:first-of-type{
-        transform: scale(0.9);
+    @media(min-width: 768px) and (max-width:1023px){
+        
+        .js-scroll, .slide-left{
+            animation:none;
+        }
+        .plan-card{
+            width:20rem;
+            /* height: 648px; */
+        }
+        .plan-card:first-of-type{
+            transform: scale(0.9);
+        }
+        .plan-card:nth-of-type(2){
+            z-index: 4;
+        }
+        .plan-card:last-of-type{
+            transform: scale(0.9);
+        }
+        .plan-card:hover{
+            position: relative;
+            z-index: 6;
+            border-radius: 0.3rem;
+            /* box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.55); */
+            /* transform: scale(1.01); */
+            transform: translateY(-10px);
+            /* transition: ease-in 200ms; */
+            /* cursor: pointer; */
+        }
     }
-    .plan-card:nth-of-type(2){
-        z-index: 4;
-    }
-    .plan-card:last-of-type{
-        transform: scale(0.9);
-    }
-    .plan-card:hover{
-        position: relative;
-        z-index: 6;
-        border-radius: 0.3rem;
-        /* box-shadow: 3px 4px 6px 1px rgba(0, 0, 0, 0.55); */
-        /* transform: scale(1.01); */
-        transform: translateY(-10px);
-        /* transition: ease-in 200ms; */
-        /* cursor: pointer; */
-    }
-}
 </style>
