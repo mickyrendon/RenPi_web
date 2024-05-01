@@ -14,9 +14,6 @@ function impar(idx){
 }
 const impares = impar
 
-function first(idx){
-    return idx === 0?true:false
-}
 ---
 <div class="services-ctr mx-auto gap-8 grid relative">
     <div class="grid place-items-center w-full">    
@@ -33,7 +30,7 @@ function first(idx){
                 paragraph={item.content}
                 url={item.url}
                 impar={impares(idx)}
-                first={first(idx)}
+                first={idx === 0?true:false}
             />
             ))
         }
