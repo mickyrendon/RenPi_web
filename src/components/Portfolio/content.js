@@ -1,0 +1,107 @@
+// TODO, optimizar las fotos por un mejor tamano y full
+
+export const proyectStructure = [
+    // imgAlt =  la primera en mayuscula para que no hayan errores
+    {
+        title: `MI RESTAURANT`,
+        content: `Template personalizable para cualquier restaurante, con galeria de menu, links a sucursales, redes sociales, formulario de contacto y hacer pedidos.`,
+        imgAlt: `mi-resto`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/resto.png`,
+        iconImage: `assets/gallery/ProyectsIcons/resto.svg`,
+        buttons : {
+            demoURl: `https://mirestorant.netlify.app/`,
+            repoURl: `https://github.com/mickyrendon/Sushi-resto`
+        },
+        ownClass: `resto-ctr`,
+    },
+    {
+        title: `SHOPPI`,
+        content: `Ecommerce que permite filtrar productos por su título y categoría, consultar detalles, agregar al carrito de compras, hacer checkout y revisar historial de compras.`,
+        imgAlt: `Shoppi`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/shoppi.png`,
+        iconImage: `assets/gallery/ProyectsIcons/shoppi.svg`,
+        buttons : {
+            demoURl: `https://shoppiapp.netlify.app/`,
+            repoURl: `https://github.com/mickyrendon/shoppi`
+        },
+        ownClass: `shoppi`,
+    },
+    {
+        title: `PALE BLUE DOT PODCAST`,
+        content: `Pagina web para un podcast que permite reproducir capítulos desde spotify.`,
+        imgAlt: `PaleBlueDotPodcast-logo`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/paleBlue.png`,
+        iconImage: `assets/gallery/logo.svg`,
+        buttons : {
+            demoURl: `https://mickyrendon.github.io/PaleBlueDotPodcast/`,
+            repoURl: `https://github.com/mickyrendon/PaleBlueDotPodcast`
+        },
+        ownClass: `pbdp-ctnr`,
+    },
+    {
+        title: `Los Tilos`,
+        content: `Pagina web para casa de alquiler a turistas, con galeria, información completa sobre el lugar, servicios, ubicación, tarifas y medios de pago con un botón para reservar por whatsApp.`,
+        imgAlt: `los-tilos-logo`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/lostilos.png`,
+        iconImage: `assets/gallery/ProyectsIcons/losTilosLogo.png`,
+        buttons : {
+            demoURl:`https://mickyrendon.github.io/LosTilos/`,
+            repoURl: `https://github.com/mickyrendon/LosTilos`
+    
+        },
+        ownClass: `l-tls`,
+    },
+]
+
+/* otros proyectos
+
+    {
+        title: `MMOVIE`,
+        content: `Aplicación que permite ver y buscar peliculas en cartelera, usa la API de 'TheMovieDB'.`,
+        imgAlt: `Mmovie`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/mmovie.png`,
+        iconImage: `assets/gallery/ProyectsIcons/mmovieLogo.svg`,
+        buttons : {
+            demoURl: `https://mickyrendon.github.io/mmovie/#home`,
+            repoURl: `https://github.com/mickyrendon/mmovie`
+        },
+        ownClass: `mmovie`,
+    },
+    // {
+    //     title: `TWITTER CLONE`,
+    //     content: `Clon de Twitter del Platzi challenge gallery web creado con HTML, CSS y un poco de JS con diseño responsive.`,
+    //     imgAlt: `Twitter-clone`,
+    //     bkgImage: `assets/gallery/proyectsBackgrounds/twitter.png`,
+    //     iconImage: `assets/gallery/ProyectsIcons/twitter-svgrepo-com.svg`,
+    //     buttons : {
+    //         demoURl: `https://mickyrendon.github.io/twitter-clone/`,
+    //         repoURl: `https://github.com/mickyrendon/twitter-clone`
+    //     },
+    //     ownClass: `twtr`,
+    // },
+    // {
+    //     title: `FIND FOX`,
+    //     content: `Aplicación que permite buscar imagenes de zorros de forma aleatoria, usa la API de 'randomfox' y buenas prácticas como lazy loader y dinamic import creado con vanilla JavaScript, HTML y Tailwind.`,
+    //     imgAlt: `Find-Fox`,
+    //     bkgImage: `assets/gallery/proyectsBackgrounds/ffox.png`,
+    //     iconImage: `assets/gallery/ProyectsIcons/ffox.svg`,
+    //     buttons : {
+    //         demoURl: `https://find-fox.netlify.app/`,
+    //         repoURl: `https://github.com/mickyrendon/FindFox`
+    //     },
+    //     ownClass: `fox`,
+    // },
+    // {
+    //     title: `TODO LIST`,
+    //     content: `Aplicación que permite crear tareas pendientes con ReactJS, componentes, props y atributos, props drillin, eventos, estados, librerias de iconos, local storage, custom hooks, features-first, directories en React, useEffect, react context, use context, react portals y formularios.`,
+    //     imgAlt: `Todo-list`,
+    //     bkgImage: `assets/gallery/proyectsBackgrounds/todoList.png`,
+    //     iconImage: `assets/gallery/ProyectsIcons/todoList.svg`,
+    //     buttons : {
+    //         demoURl: `https://mickyrendon.github.io/TODOs_app/`,
+    //         repoURl: `https://github.com/mickyrendon/TODOs_app`
+    //     },
+    //     ownClass: `todo-list`,
+    // },
+
+ */

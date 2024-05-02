@@ -3,14 +3,16 @@ import MenuMobile from "./MenuMobile.astro"
 interface Props{
     nosotros:string;
     servicios:string;
+    portfolio: string;
     metodologia:string;
     contacto:string;
     nosotrosUrl:string;
     serviciosUrl:string;
+    portfolioUrl:string;
     metodologiaUrl:string;
     contactoUrl:string;
 }
-const {nosotros,servicios, metodologia, contacto, nosotrosUrl, serviciosUrl, metodologiaUrl, contactoUrl} = Astro.props
+const {nosotros,servicios, portfolio, metodologia, contacto, nosotrosUrl, serviciosUrl, portfolioUrl, metodologiaUrl, contactoUrl} = Astro.props
 
 ---
 
@@ -28,6 +30,11 @@ const {nosotros,servicios, metodologia, contacto, nosotrosUrl, serviciosUrl, met
         <li>
             <a href={serviciosUrl}>
                 {servicios}
+            </a>
+        </li>
+        <li>
+            <a href={portfolioUrl}>
+                {portfolio}
             </a>
         </li>
         <li>
@@ -49,6 +56,7 @@ const {nosotros,servicios, metodologia, contacto, nosotrosUrl, serviciosUrl, met
 <MenuMobile
 nosotros="Nosotros"
 planes="Servicios"
+portfolio="Portfolio"
 servicios="Metodología"
 contacto="Contacto"
 />

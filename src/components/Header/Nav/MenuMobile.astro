@@ -5,10 +5,11 @@ import Logo from "../../Logo/Logo.astro";
 interface Props{
     nosotros:string;
     planes:string;
+    portfolio: string;
     servicios:string;
     contacto:string;
 }
-const {nosotros,planes, servicios, contacto} = Astro.props
+const {nosotros,planes, portfolio, servicios, contacto} = Astro.props
 ---
 
 <div 
@@ -23,6 +24,11 @@ class="menu-mobile hidden p-8 w-full h-screen max-h-max fixed top-16 z-40 bg-gra
         <li>
             <a href="#servicios">
                 {planes}
+            </a>
+        </li>
+        <li>
+            <a href="#portfolio">
+                {portfolio}
             </a>
         </li>
         <li>

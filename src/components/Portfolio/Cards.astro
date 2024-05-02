@@ -1,0 +1,36 @@
+---
+interface Props {
+    url:string;
+    imgUrl:string;
+    iconUrl:string;
+    altImg:string;
+    title:string;
+    p:string;
+}
+const {url,imgUrl, iconUrl, altImg, title, p} = Astro.props
+---
+
+<div class="border-md w-[320px] h-[400px] bg-gradient-to-l rounded-lg shadow-md from-gray-700 via-gray-900 to-black relative">
+        <a href={url} target="_blank" class="inline-block w-full h-full absolute md:cursor-pointer">
+        <figure class="w-full m-auto flex flex-col gap-4 rounded-lg shadow-md js-scroll fade-in-bottom">
+            <img 
+            src={imgUrl}
+            alt="fotografia-corporativa" 
+            class="w-full m-auto h-[200px] object-cover rounded-t-lg opacity-70 md:opacity-50 md:hover:opacity-100 transition-opacity"
+             >
+        </figure>
+        <div class="py-8 px-4">
+            <div class="flex gap-2 justify-between">
+                <h1 class=" text-lg font-bold uppercase tracking-widest text-neutral-300">
+                        <slot 
+                        name="before"
+                        title={altImg}
+                        />
+                        {title}
+                </h1>
+                <img src={iconUrl} class=`w-8 h-8 rounded-full bg-cyan-950`></img>
+            </div>
+            <p class="mt-2 text-sm text-neutral-200 text-balance">{p}</p>
+        </div>
+    </a>
+</div>
