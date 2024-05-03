@@ -32,7 +32,7 @@ export const proyectStructure = [
         content: `Pagina web para un podcast que permite reproducir capítulos desde spotify.`,
         imgAlt: `PaleBlueDotPodcast-logo`,
         bkgImage: `assets/gallery/proyectsBackgrounds/podcast.png`,
-        iconImage: `assets/gallery/logo.svg`,
+        iconImage: `assets/gallery/ProyectsIcons/logo.svg`,
         buttons : {
             demoURl: `https://mickyrendon.github.io/PaleBlueDotPodcast/`,
             repoURl: `https://github.com/mickyrendon/PaleBlueDotPodcast`

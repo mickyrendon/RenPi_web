@@ -1,29 +1,12 @@
 ---
-// import BaseHead from '../components/SEO/BaseHead.astro'
+import BaseHead from '../components/SEO/BaseHead.astro'
 ---
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-  <!-- <BaseHead title="RenPi - Agencia Digital" description="Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a lograr sus objetivos en línea."/> -->
-	<head>
-		<meta charset="utf-8" />
-    <meta name="description" content="Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a lograr sus objetivos en línea"/>
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="bingbot" content="index, follow">
-    <link rel="canonical" href="https://renpi.cl">
-    <meta property="og:locale" content="es_CL">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="RenPi - Agencia Digital">
-    <meta property="og:url" content="https://mickyrendon.github.io/RenPi/">
-    <meta property="og:site_name" content="Agencia Digital">
-    <meta name="twitter:card" content="summary_large_image">
-		<title>RenPi - Agencia Digital</title>
-	</head>
+  <BaseHead
+  title="RenPi - Agencia Digital"
+  description="Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a lograr sus objetivos en línea."
+  />
 	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black" >
         <slot/>
 	</body>
