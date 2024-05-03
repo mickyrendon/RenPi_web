@@ -6,7 +6,7 @@ export const proyectStructure = [
         title: `MI RESTAURANT`,
         content: `Template personalizable para cualquier restaurante, con galeria de menu, links a sucursales, redes sociales, formulario de contacto y hacer pedidos.`,
         imgAlt: `mi-resto`,
-        bkgImage: `assets/gallery/proyectsBackgrounds/resto.png`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/restorant.png`,
         iconImage: `assets/gallery/ProyectsIcons/resto.svg`,
         buttons : {
             demoURl: `https://mirestorant.netlify.app/`,
@@ -14,6 +14,34 @@ export const proyectStructure = [
         },
         ownClass: `resto-ctr`,
     },
+    {
+        title: `Los Tilos`,
+        content: `Pagina web para casa de alquiler a turistas, con galeria, información completa sobre el lugar, servicios, ubicación, tarifas y medios de pago con un botón para reservar por whatsApp.`,
+        imgAlt: `los-tilos-logo`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/tilos.png`,
+        iconImage: `assets/gallery/ProyectsIcons/losTilosLogo.png`,
+        buttons : {
+            demoURl:`https://mickyrendon.github.io/LosTilos/`,
+            repoURl: `https://github.com/mickyrendon/LosTilos`
+    
+        },
+        ownClass: `l-tls`,
+    },
+    {
+        title: `PALE BLUE DOT PODCAST`,
+        content: `Pagina web para un podcast que permite reproducir capítulos desde spotify.`,
+        imgAlt: `PaleBlueDotPodcast-logo`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/podcast.png`,
+        iconImage: `assets/gallery/logo.svg`,
+        buttons : {
+            demoURl: `https://mickyrendon.github.io/PaleBlueDotPodcast/`,
+            repoURl: `https://github.com/mickyrendon/PaleBlueDotPodcast`
+        },
+        ownClass: `pbdp-ctnr`,
+    }
+]
+
+/* otros proyectos
     {
         title: `SHOPPI`,
         content: `Ecommerce que permite filtrar productos por su título y categoría, consultar detalles, agregar al carrito de compras, hacer checkout y revisar historial de compras.`,
@@ -26,35 +54,6 @@ export const proyectStructure = [
         },
         ownClass: `shoppi`,
     },
-    {
-        title: `PALE BLUE DOT PODCAST`,
-        content: `Pagina web para un podcast que permite reproducir capítulos desde spotify.`,
-        imgAlt: `PaleBlueDotPodcast-logo`,
-        bkgImage: `assets/gallery/proyectsBackgrounds/paleBlue.png`,
-        iconImage: `assets/gallery/logo.svg`,
-        buttons : {
-            demoURl: `https://mickyrendon.github.io/PaleBlueDotPodcast/`,
-            repoURl: `https://github.com/mickyrendon/PaleBlueDotPodcast`
-        },
-        ownClass: `pbdp-ctnr`,
-    },
-    {
-        title: `Los Tilos`,
-        content: `Pagina web para casa de alquiler a turistas, con galeria, información completa sobre el lugar, servicios, ubicación, tarifas y medios de pago con un botón para reservar por whatsApp.`,
-        imgAlt: `los-tilos-logo`,
-        bkgImage: `assets/gallery/proyectsBackgrounds/lostilos.png`,
-        iconImage: `assets/gallery/ProyectsIcons/losTilosLogo.png`,
-        buttons : {
-            demoURl:`https://mickyrendon.github.io/LosTilos/`,
-            repoURl: `https://github.com/mickyrendon/LosTilos`
-    
-        },
-        ownClass: `l-tls`,
-    },
-]
-
-/* otros proyectos
-
     {
         title: `MMOVIE`,
         content: `Aplicación que permite ver y buscar peliculas en cartelera, usa la API de 'TheMovieDB'.`,
