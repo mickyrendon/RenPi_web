@@ -15,6 +15,18 @@ export const proyectStructure = [
         ownClass: `resto-ctr`,
     },
     {
+        title: `TURISMO TRAVEL`,
+        content: `Frontend personalizable para cualquier agencia turistica, con 5 paginas, galeria de paquetes,  formulario de contacto, ubicación en google maps, y carrito de compra.`,
+        imgAlt: `travel-logo`,
+        bkgImage: `assets/gallery/proyectsBackgrounds/travel.png`,
+        iconImage: `assets/gallery/ProyectsIcons/travel.png`,
+        buttons : {
+            demoURl: `https://mickyrendon.github.io/travel/`,
+            repoURl: `https://github.com/mickyrendon/travel`
+        },
+        ownClass: `turismo-ctr`,
+    },
+    {
         title: `Los Tilos`,
         content: `Pagina web para casa de alquiler a turistas, con galeria, información completa sobre el lugar, servicios, ubicación, tarifas y medios de pago con un botón para reservar por whatsApp.`,
         imgAlt: `los-tilos-logo`,
