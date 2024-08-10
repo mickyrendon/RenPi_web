@@ -1,0 +1,30 @@
+---
+import Button from '../Button/Button.astro'
+import DinamicText from '../Hero/DinamicText/DinamicText.astro'
+interface Props{
+    title: string;
+    subtitle: string;
+}
+const {title, subtitle} = Astro.props
+---
+
+<div class="services-ctr w-full h-screen mx-auto grid relative place-items-center">
+    <div class="grid place-items-center gap-20 w-full">    
+        <h1 class="text-3xl md:text-5xl font-bold text-center mb-4 fade-in opacity-90">{title}</h1>
+        <DinamicText/>
+    </div>
+    <div class="grid place-items-center w-full">    
+        <h3 class="text-base md:text-xl font-medium text-center mb-8 fade-in opacity-90">{subtitle}</h3>
+        <Button
+        value="Solicitar Asesoria Gratuita"
+        url="https://api.whatsapp.com/send?phone=56930575930"
+        target='_blank'
+        />
+</div>
+<style>
+    @media(min-width: 1020px){
+        .services-ctr{
+            width: 80%;
+        }
+    }
+</style>
