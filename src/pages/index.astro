@@ -12,7 +12,8 @@ import Chat from "../components/ChatBtn.astro"
 import MediumCardsServices from "../components/PacksCards/MediumCardsServices.astro";
 import ProyectsCard from "../components/Portfolio/Cards.astro";
 import { proyectStructure } from "../components/Portfolio/content"
-import Hero from "../components/Hero/Hero.astro";
+// import Hero from "../components/Hero/Hero.astro";
+import Carousel from "../components/Hero/Carousel/Carousel.astro";
 
 const proyects = proyectStructure
 ---
@@ -32,10 +33,11 @@ const proyects = proyectStructure
 		contactoUrl="#contacto"
 		>
 		</Nav>
-		<Hero
+		<!-- <Hero
 		title="POTENCIAMOS TU MARCA CON"
 		subtitle="¡Trabajemos Juntos!"
-		/>
+		/> -->
+		<Carousel/>
 			<!-- <Video/> -->
 	</header>
 	<>

@@ -12,3 +12,8 @@ export default {
   ],
 }
 
+// Antes
+// const theme = require('./theme');
+
+// // Después
+// import theme from './theme';
