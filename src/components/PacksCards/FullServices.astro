@@ -32,8 +32,8 @@ import VideoCard from './VideoCard.astro'
         </div>
     </div>
 </article>
-<article class="py-12 w-full grid place-items-center bg-gray-100">
-    <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
+<article class="py-12 w-full grid place-items-center bkg-gradient">
+    <div class="grid video-section place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
         <!-- Description card -->
         <VideoDescription/>
         <!-- Pack card -->
@@ -64,9 +64,9 @@ import VideoCard from './VideoCard.astro'
         <WebDev/>
     </div>
 </article>
-<article class="py-12 w-full grid place-items-center bg-gray-100">
+<article class="py-12 w-full grid place-items-center bkg-gradient">
     <!-- flex-row-reverse -->
-    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+    <div class="grid exclusive-section  bg-transparent place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
         <ExclusiveCard/>
         {
             content?.map((item) => (
@@ -93,3 +93,13 @@ import VideoCard from './VideoCard.astro'
         <CommunityM/>
     </div>
 </article> -->
+
+<style>
+    .bkg-section{
+        background-color: rgb(44, 53, 69);
+    }
+    .video-section, .exclusive-section{
+        /* background-color: rgb(44, 53, 69); */
+        color: whitesmoke;
+    }
+</style>

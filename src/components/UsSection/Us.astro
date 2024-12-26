@@ -10,12 +10,12 @@ const {id} = Astro.props
 
 <div 
 id={id}
-class="flex justify-center bg-gray-100 pb-12 md:h-[500px]"
->
+class="flex bkg-gradient justify-center bkg-section pb-12 md:h-[500px]">
     <div class="grid place-items-center gap-8 text-center w-10/12 md:grid-cols-2 pt-16 md:relative">
         <Logo description='potenciando tu presencia en línea'/>
         <div class="flex flex-col gap-y-8">
-            <p class="max-w-3xl text-base text-center js-scroll fade-in-bottom scrolled text-balance text-[#030508] md:text-lg md:text-start">
+            <!-- text-[#030508] -->
+            <p class="max-w-3xl text-base text-center js-scroll fade-in-bottom scrolled text-balance md:text-lg md:text-start">
                 ¡Ayudamos a lograr tus objetivos en línea! <br>
                 Nuestro equipo está compuesto por expertos en <b class="opacity-80">Fotografía</b>, <b class="opacity-80">Video</b>, <b class="opacity-80">Diseño y Desarrollo web</b>. Trabajamos juntos para ofrecer soluciones personalizadas y efectivas. 
             </p>
@@ -37,3 +37,11 @@ class="flex justify-center bg-gray-100 pb-12 md:h-[500px]"
         </div>
     </div>
 </div>
+<style>
+    .bkg-section{
+        background-color: rgb(44, 53, 69);
+    }
+    .us-section{
+        color: whitesmoke;
+    }
+</style>

@@ -1,4 +1,5 @@
 const scrollElements = document.querySelectorAll(".js-scroll");
+const scrollLine = document.querySelectorAll(".line");
 
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -22,6 +23,10 @@ export const handleScrollAnimation = () => {
     // else if (elementOutofView(el)) {
       //   hideScrollElement(el)
       // }
+  })
+  scrollLine.forEach((el) => {
+    elementInView(el, 1.25)?
+    displayScrollElement(el): null
   })
 }
   

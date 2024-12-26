@@ -5,7 +5,7 @@ import BaseHead from '../components/SEO/BaseHead.astro'
 <html lang="es" class="scroll-smooth">
   <BaseHead
   title="RenPi - Agencia Digital"
-  description="Somos una Agencia Digital joven, creativa e innovadora dedicada a ayudar a nuestros clientes a lograr sus objetivos en línea."
+  description="Agencia Digital, Fotografía, Video y Edición de Video, Diseño y Desarrollo Web."
   />
 	<body class="bg-gradient-to-l from-gray-700 via-gray-900 to-black" >
         <slot/>
@@ -58,8 +58,10 @@ import BaseHead from '../components/SEO/BaseHead.astro'
         max-width:71ch;
         color:gainsboro ;
     }
-
-    .services-ctr h2, .services-ctr h3, h1{
+    .p-line{
+        color: black;
+    }
+    .services-ctr h2, .services-ctr h3, h1, .logo figcaption{
         color: whitesmoke;
     }
     /* cards styles */
@@ -70,7 +72,8 @@ import BaseHead from '../components/SEO/BaseHead.astro'
 
     }
     .portfolio{
-      background: linear-gradient(to right,rgba(56, 191, 248, 0.7), rgba(59, 131, 246, 0.4));
+      /* background: linear-gradient(to right,rgba(56, 191, 248, 0.7), rgba(59, 131, 246, 0.4)); */
+      background: linear-gradient(to bottom, rgb(243, 244, 246), rgb(209, 213, 219))
     }
     .scroll-animation {
         opacity: 0; /* El texto comienza invisible */
@@ -87,11 +90,18 @@ import BaseHead from '../components/SEO/BaseHead.astro'
         opacity: 0;
         transition: opacity 500ms;
       }
+    .js-scroll-line {
+        opacity: 0;
+        transition: opacity 2s;
+      }
       
       .js-scroll.scrolled {
         opacity: 1;
       }
       
+      .scrolled.fade-in-line {
+        animation: fadeInP 1s ease-in-out both;
+      }
       .scrolled.fade-in-p {
         animation: fadeInP 1s ease-in-out both;
       }
@@ -112,8 +122,9 @@ import BaseHead from '../components/SEO/BaseHead.astro'
       }
       .scrolled.crono {
         transform:scaleY(1);
-        transition-delay: 6s;
-        background: linear-gradient(rgb(56,189,248), rgb(59,130,246), transparent);
+        transition-delay: 16s;
+        background: linear-gradient(rgb(145, 200, 0), rgb(84, 148, 0), transparent);
+        /* background: linear-gradient(rgb(56,189,248), rgb(59,130,246), transparent); */
       }
       
     /* keyframes */
