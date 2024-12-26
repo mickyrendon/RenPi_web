@@ -11,9 +11,3 @@ export default {
     require('flowbite/plugin')
   ],
 }
-
-// Antes
-// const theme = require('./theme');
-
-// // Después
-// import theme from './theme';

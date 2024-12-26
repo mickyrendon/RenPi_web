@@ -1,27 +1,30 @@
 ---
 import Card from './Card.astro'
-import Basic from './Basic.astro'
-import Standar from './Standar.astro'
-import Premium from './Premium.astro'
+import WebDevCard from './WebDevCard.astro'
+import Foto from './Foto.astro'
 import Exclusive from './Exclusive.astro'
 import Slider from '../Slider/Slider.astro'
 import {content} from './generalContent'
 import WebDev from './ServicesDescriptionCards/WebDev.astro'
-import CommunityM from './ServicesDescriptionCards/CommunityM.astro'
+import VideoDescription from './ServicesDescriptionCards/VideoDescription.astro'
 import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
+import VideoCard from './VideoCard.astro'
 ---
+<!-- TODO, to change 'description cards' to video description -->
 
 <article class="py-12 w-full grid place-items-center">
     <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+        <!-- Pack card -->
         {
             content?.map((item) => (
-                item.basic?
-                    <Card title={item.basic.title}>
-                        <Basic slot="list"/>
+                item.fotografia?
+                    <Card title={item.fotografia.title}>
+                        <Foto slot="list"/>
                     </Card>
                 :null
             ))
         }
+        <!-- Description card -->
         <div class="w-full">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 js-scroll fade-in">Fotografía</h2>
             <Slider>
@@ -30,13 +33,15 @@ import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
     </div>
 </article>
 <article class="py-12 w-full grid place-items-center bg-gray-100">
-    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
-        <WebDev/>
+    <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
+        <!-- Description card -->
+        <VideoDescription/>
+        <!-- Pack card -->
         {
             content?.map((item) => (
-                item.standar?
-                    <Card title={item.standar.title}>
-                        <Standar slot="list"/>
+                item.video?
+                    <Card title={item.video.title}>
+                        <VideoCard slot="list"/>
                     </Card>
                 :null
             ))
@@ -44,6 +49,37 @@ import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
     </div>
 </article>
 <article class="py-12 w-full grid place-items-center">
+    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+        <!-- Pack card -->
+        {
+            content?.map((item) => (
+                item.web?
+                <Card title={item.web.title}>
+                        <WebDevCard slot="list"/>
+                    </Card>
+                :null
+            ))
+        }
+        <!-- Description card -->
+        <WebDev/>
+    </div>
+</article>
+<article class="py-12 w-full grid place-items-center bg-gray-100">
+    <!-- flex-row-reverse -->
+    <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
+        <ExclusiveCard/>
+        {
+            content?.map((item) => (
+                item.exclusive?
+                <Card title={item.exclusive.title}>
+                        <Exclusive slot="list"/>
+                    </Card>
+                :null
+            ))
+        }
+    </div>
+</article>
+<!-- <article class="py-12 w-full grid place-items-center">
     <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
         {
             content?.map((item) => (
@@ -56,18 +92,4 @@ import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
         }
         <CommunityM/>
     </div>
-</article>
-<article class="py-12 w-full grid place-items-center bg-gray-100">
-    <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
-        <ExclusiveCard/>
-        {
-            content?.map((item) => (
-                item.exclusive?
-                    <Card title={item.exclusive.title}>
-                        <Exclusive slot="list"/>
-                    </Card>
-                :null
-            ))
-        }
-    </div>
-</article>
+</article> -->

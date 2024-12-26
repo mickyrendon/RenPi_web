@@ -17,6 +17,7 @@ import Carousel from "../components/Hero/Carousel/Carousel.astro";
 
 const proyects = proyectStructure
 ---
+/// <reference types="astro/client" />
 <Layout>
 	<Preloader/>
 	<header class="mt-[64px]">
@@ -40,7 +41,7 @@ const proyects = proyectStructure
 		<Carousel/>
 			<!-- <Video/> -->
 	</header>
-	<>
+	<!-- <> -->
 		<Chat/>
 		<Us id="nosotros"/>
 		<section id="servicios" class="bg-white text-black pt-24 grid gap-24 place-items-center">
@@ -84,7 +85,7 @@ const proyects = proyectStructure
 			}
 			</div>
 		</section>
-		<section id="metodologia" class="services-section bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
+		<section id="metodologia" class="services-section bkg-gradient bg-gradient-to-l from-gray-700 via-gray-900 to-black text-white py-16">
 			<Metodology
 			sectionTitle="Descubre cómo trabajamos"
 			paragraph="Diseño digital a la medida de tus necesidades"

@@ -6,10 +6,11 @@ interface Props{
 }
 const {value, url, target} = Astro.props
 ---
+<!-- bg-gradient-to-r from-sky-400 to-blue-500 -->
 <a 
 href={url} 
 target={target}
-class="max-w-fit self-center bg-gradient-to-r from-sky-400 to-blue-500 text-white py-2 px-4 rounded-md inline-block text-center md:hover:shadow-lg md:hover:transition-all scale-125 lg:hover:-translate-y-0.5 lg:hover:transition-transform lg:opacity-90 lg:hover:opacity-100 transition-transform"
+class="max-w-fit self-center btns-bkg text-white py-2 px-4 rounded-md inline-block text-center md:hover:shadow-lg md:hover:transition-all scale-125 lg:hover:-translate-y-0.5 lg:hover:transition-transform lg:opacity-90 lg:hover:opacity-100 transition-transform"
 >
     {value}
 </a>

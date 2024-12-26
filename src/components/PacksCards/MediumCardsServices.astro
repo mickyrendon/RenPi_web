@@ -1,25 +1,25 @@
 ---
 import Card from "./Card.astro";
-import Basic from "./Basic.astro";
-import Premium from "./Premium.astro";
-import Standar from "./Standar.astro";
+import Foto from "./Foto.astro";
+import VideoCard from "./VideoCard.astro";
+import WebDevCard from "./WebDevCard.astro";
 import Exclusive from "./Exclusive.astro"
 import { content } from "./generalContent";
 ---
 <div class="p-card-ctr grid grid-cols-1 mb-16 place-items-center md:grid-cols-3 gap-8 px-4 md:w-11/12 md:m-auto">
     {
         content?.map((item) => (
-            item.basic?
-                <Card title={item.basic.title}>
-                    <Basic slot="list"/>
+            item.fotografia?
+                <Card title={item.fotografia.title}>
+                    <Foto slot="list"/>
                 </Card>
-            :item.premium?
-                <Card title={item.premium.title}>
-                    <Premium slot="list"/>
+            :item.video?
+                <Card title={item.video.title}>
+                    <VideoCard slot="list"/>
                 </Card>
-            :item.standar?
-                <Card title={item.standar.title}>
-                    <Standar slot="list"/>
+            :item.web?
+                <Card title={item.web.title}>
+                    <WebDevCard slot="list"/>
                 </Card>
             : null
         ))

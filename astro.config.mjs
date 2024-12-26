@@ -1,12 +1,11 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 import sitemap from "@astrojs/sitemap";
 
+// @ts-ignore
 // https://astro.build/config
 export default defineConfig({
   site: 'https://renpi.cl',
-  integrations: [tailwind({}), react({
-    include: ['**/react/*']
-  }), sitemap()]
+  integrations: [tailwind({}), react(), sitemap()]
 });
