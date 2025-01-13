@@ -1,0 +1,33 @@
+---
+import { development } from "./content";
+// import { arrayName } from "./buttonEvent"
+import ProyectsCard from "./Cards.astro";
+// TODO:verificar que el arrayName este trayendo los valores correctos
+// const elem = arrayName()
+// console.log(arrayName);
+
+---
+
+<!--  -->
+<!-- TODO: guardar todos los proyectos en un mismo documento > renderizar todos los proyectos > ocultar segun el id del btn clickeado, debe coincidir con la etiqueta de cada elemento > ocultar usando css condicional de astro-->
+<!--poner de nuevo cuando hayan mas de 3 proyectos lg:grid-rows-2 -->
+<!-- // 1. obtener el valor de id de cada btn precionado
+// 2. comparar el valor id con el valor del array portfolio
+// 3. si el valor del id es igual al valor del array portfolio renderizar los proyectos de esa categoria -->
+<div id="proyects-gallery" class="grid m-auto w-full sm:w-auto gap-8 place-items-center md:grid-cols-2 lg:grid-cols-3  lg:gap-y-20">
+    {
+        development?.map(
+                ({buttons, title, tag, content, imgAlt, bkgImage, iconImage}) => (
+                    <ProyectsCard
+                        url={buttons.demoURl}
+                        imgUrl={bkgImage}
+                        title={title}
+                        tag={tag}
+                        p={content}
+                        altImg={imgAlt}
+                        iconUrl={iconImage}
+                    />
+                )
+            )
+    } 
+    </div>

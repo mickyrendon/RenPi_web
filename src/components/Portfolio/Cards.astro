@@ -5,13 +5,22 @@ interface Props {
     iconUrl:string;
     altImg:string;
     title:string;
+    tag:string;
     p:string;
 }
-const {url,imgUrl, iconUrl, altImg, title, p} = Astro.props
+const {url,imgUrl, iconUrl, altImg, title, tag, p} = Astro.props
 ---
 
-<div class="border-md w-[320px] h-[400px] bg-gradient-to-l rounded-lg shadow-md from-gray-700 via-gray-900 to-black relative">
-        <a href={url} target="_blank" class="inline-block w-full h-full absolute md:cursor-pointer">
+<div 
+class=" border-md w-[320px] h-[400px] bg-gradient-to-l rounded-lg shadow-md from-gray-700 via-gray-900 to-black relative">
+    <kbd class="px-2 py-1.5 text-xs z-30 absolute m-4 right-0 font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+        <slot
+        name="before"
+        title={tag}
+        />
+        {tag}
+    </kbd>
+    <a href={url} target="_blank" class="inline-block w-full h-full absolute md:cursor-pointer">
         <figure class="w-full m-auto flex flex-col gap-4 rounded-lg shadow-md js-scroll fade-in-bottom">
             <img 
             src={imgUrl}

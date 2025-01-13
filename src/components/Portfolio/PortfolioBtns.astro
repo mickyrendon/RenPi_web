@@ -1,0 +1,75 @@
+<div class="flex items-center justify-center py-4 md:pb-8 flex-wrap">
+    <button 
+    id="todas"
+    type="button" 
+    class="active hover:text-lime-700 border-lime-600 hover:bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-lime-500 dark:text-lime-500 dark:hover:text-white dark:hover:bg-lime-500 dark:bg-gray-900 dark:focus:ring-lime-800">
+    Todas las Categorías
+    </button>
+    <button
+    id="Fotografía" 
+    type="button" 
+    class="hover:text-lime-700 text-gray-900 border border-white hover:border-lime-600 hover:bg-white dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+    Fotografía
+    </button>
+    <button
+    id="Video" 
+    type="button" 
+    class="text-gray-900 hover:text-lime-700 border border-white hover:border-lime-600 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+    Video
+    </button>
+    <button
+    id="Desarrollo Web" 
+    type="button" 
+    class="text-gray-900 border hover:text-lime-700 border-white hover:border-lime-600 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
+    Diseño y Desarrollo Web
+    </button>
+    <!-- <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Gaming</button> -->
+</div>
+<style>
+    .active{
+        color: white;
+        /* border: 1px solid white; */
+        background-color: #4d7c0f;
+    }
+</style>
+
+<script>
+    
+import { toggleGallery } from "./buttonEvent";
+//portfolio btns event
+document.querySelectorAll('button').forEach(button => {
+        // make sure the button clicked is the one we want
+        if(button.id === 'todas' || button.id === 'Fotografía' || button.id === 'Video' || button.id === 'Desarrollo Web'){
+            
+            button.addEventListener('click', (element) => {
+
+                if(button.id !== 'todas'){
+                    let button = document.getElementById('todas')
+                    button.classList.remove('active')
+                }
+                if(button.id !== 'Fotografía'){
+                    let button = document.getElementById('Fotografía')
+                    button.classList.remove('active')
+                }
+                if(button.id !== 'Video'){
+                    let button = document.getElementById('Video')
+                    button.classList.remove('active')
+                }
+                if(button.id !== 'Desarrollo Web'){
+                    let button = document.getElementById('Desarrollo Web')
+                    button.classList.remove('active')
+                }
+                
+                toggleGallery(button.id)
+                const targetElement = element.target
+                return targetElement.classList.add('active')
+                // giving the id of the button clicked to the function
+            
+                // TODO: remove active class from other buttons, remove hover class from this btn && unvalidate pointer event of these buttons
+                // aplicar la clase active al boton 'todas' y removerla cuando se haga click en otro boton
+            })
+        }
+
+    });
+    
+</script>
