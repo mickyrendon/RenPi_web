@@ -14,7 +14,7 @@ import ProyectsCard from "./Cards.astro";
 <!-- // 1. obtener el valor de id de cada btn precionado
 // 2. comparar el valor id con el valor del array portfolio
 // 3. si el valor del id es igual al valor del array portfolio renderizar los proyectos de esa categoria -->
-<div id="proyects-gallery" class="grid m-auto w-full sm:w-auto gap-8 place-items-center md:grid-cols-2 lg:grid-cols-3  lg:gap-y-20">
+<div id="proyects-gallery" class="grid m-auto w-full sm:w-auto gap-8 place-items-center md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2  lg:gap-y-20">
     {
         development?.map(
                 ({buttons, title, tag, content, imgAlt, bkgImage, iconImage}) => (
