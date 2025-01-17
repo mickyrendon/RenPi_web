@@ -44,7 +44,8 @@ document.querySelectorAll('button').forEach(button => {
             document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
             
             // Add 'active' class to the clicked button
-            event.target.classList.add('active');
+            const target = event.target as HTMLElement;
+            target.classList.add('active');
             // Toggle gallery based on the button id
             toggleGallery(button.id);
         });
