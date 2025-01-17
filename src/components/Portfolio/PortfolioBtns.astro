@@ -1,6 +1,6 @@
 <div class="flex items-center justify-center py-4 md:pb-8 flex-wrap">
     <button 
-    id="todas"
+    id="Todas-las-Categorías"
     type="button" 
     class="active hover:text-lime-700 text-gray-900 border border-white hover:border-lime-600 hover:bg-white dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-lime-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
     Todas las Categorías
@@ -37,15 +37,17 @@ import { toggleGallery } from "./buttonEvent";
 
 // portfolio btns event
 document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', (event) => {
-        // Remove 'active' class from all buttons
-        document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
-        
-        // Add 'active' class to the clicked button
-        event.target.classList.add('active');
 
-        // Toggle gallery based on the button id
-        toggleGallery(button.id);
-    });
+    if(button.id !== 'menu-mobile-btn'){
+        button.addEventListener('click', (event) => {
+            // Remove 'active' class from all buttons
+            document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            event.target.classList.add('active');
+            // Toggle gallery based on the button id
+            toggleGallery(button.id);
+        });
+    }
 });
 </script>

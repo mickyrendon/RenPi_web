@@ -1,0 +1,45 @@
+<!-- ---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layout/Layout.astro";
+import { development } from "../../components/Portfolio/content";
+import Photography from "../../components/Portfolio/PortfolioViews/Photography.astro";
+import Video from "../../components/Portfolio/PortfolioViews/Video.astro";
+
+export const getStaticPaths = (() => {
+    return development.map((item) => ({
+        // params: { tag: item.tag.split(' ').join('-'), title: item.title.split(' ').join('-') },
+        params: { tag: item.tag, title: item.title.split(' ').join('-') },
+        props: { item }
+    }));
+}) satisfies GetStaticPaths;
+
+const { item } = Astro.props;
+const { title, tag, content, bkgImage, imgAlt } = item;
+const { buttons } = item;
+const { demoURl } = buttons;
+---
+
+<Layout title={`${title} | Portafolio`}>
+    <h1>{`${title} / ${tag} / ${content} / ${bkgImage}`}</h1>
+    <Photography
+    url={bkgImage}
+    altImg={imgAlt}
+    />
+    <!-- {
+        tag === 'Fotografía' ?
+        <Photography 
+            url={bkgImage}
+            altImg={imgAlt}
+            // title={title}
+            content={content}
+        />
+        :
+        <Video 
+            url={demoURl}
+            altImg={imgAlt}
+            // title={title}
+            content={content}
+        />
+    } --
+</Layout>
+ -->
