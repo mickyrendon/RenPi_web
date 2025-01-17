@@ -38,7 +38,7 @@ import { toggleGallery } from "./buttonEvent";
 // portfolio btns event
 document.querySelectorAll('button').forEach(button => {
 
-    if(button.id !== 'menu-mobile-btn'){
+    if(button.id !== 'menu-mobile-btn' && button.id !== 'previos-photo' && button.id !== 'next-photo' && button.id !== 'previous-carousel' && button.id !== 'next-carousel'){
         button.addEventListener('click', (event) => {
             // Remove 'active' class from all buttons
             document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
