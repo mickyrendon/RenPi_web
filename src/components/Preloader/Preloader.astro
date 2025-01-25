@@ -18,7 +18,7 @@
 
 <script>
     globalThis.addEventListener('load', async () => {
-        const { deleteLoader } = await import('./preloader')
-        return deleteLoader()
+        const { deleteLoader } = await import('./preloader.js')
+        deleteLoader()
     })
 </script>
