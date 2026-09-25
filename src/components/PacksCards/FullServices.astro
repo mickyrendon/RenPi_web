@@ -1,13 +1,13 @@
 ---
 import Card from './Card.astro'
-import WebDevCard from './WebDevCard.astro'
+// import WebDevCard from './WebDevCard.astro'
 import Foto from './Foto.astro'
-import Exclusive from './Exclusive.astro'
+// import Exclusive from './Exclusive.astro'
 import Slider from '../Slider/Slider.astro'
 import {content} from './generalContent'
-import WebDev from './ServicesDescriptionCards/WebDev.astro'
+// import WebDev from './ServicesDescriptionCards/WebDev.astro'
 import VideoDescription from './ServicesDescriptionCards/VideoDescription.astro'
-import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
+// import ExclusiveCard from './ServicesDescriptionCards/Exclusive.astro'
 import VideoCard from './VideoCard.astro'
 ---
 <!-- TODO, to change 'description cards' to video description -->
@@ -48,9 +48,9 @@ import VideoCard from './VideoCard.astro'
         }
     </div>
 </article>
-<article class="py-12 w-full grid place-items-center">
+<!-- <article class="py-12 w-full grid place-items-center">
     <div class="grid place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
-        <!-- Pack card -->
+        <-- Pack card --
         {
             content?.map((item) => (
                 item.web?
@@ -60,12 +60,12 @@ import VideoCard from './VideoCard.astro'
                 :null
             ))
         }
-        <!-- Description card -->
+        <-- Description card --
         <WebDev/>
     </div>
-</article>
-<article class="py-12 w-full grid place-items-center bkg-gradient">
-    <!-- flex-row-reverse -->
+</article> -->
+<!-- <article class="py-12 w-full grid place-items-center bkg-gradient">
+    <!- flex-row-reverse --
     <div class="grid exclusive-section  bg-transparent place-items-center gap-8 sm:w-3/5 px-4 md:grid-cols-2 md:w-10/12">
         <ExclusiveCard/>
         {
@@ -78,7 +78,7 @@ import VideoCard from './VideoCard.astro'
             ))
         }
     </div>
-</article>
+</article> -->
 <!-- <article class="py-12 w-full grid place-items-center">
     <div class="grid place-items-center gap-8 sm:w-3/5 flex-row-reverse px-4 md:grid-cols-2 md:w-10/12">
         {

@@ -1,6 +1,8 @@
 ---
 import Logo from "../Logo/Logo.astro"
 import SocialMedia from "./SocialMediaBtns.astro"
+
+const currentYear = new Date().getFullYear()
 ---
 
 <div class="py-8 mx-auto grid place-items-center text-white">
@@ -13,5 +15,5 @@ import SocialMedia from "./SocialMediaBtns.astro"
     facebook="RenPi"
     />
     </div>
-    <p class="text-center md:mt-8 opacity-50">Derechos Reservados © Agencia Digital 2025</p>
+    <p class="text-center md:mt-8 opacity-50">Derechos Reservados © Agencia Digital {currentYear}</p>
   </div>

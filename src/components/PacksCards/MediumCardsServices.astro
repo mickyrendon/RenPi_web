@@ -2,7 +2,7 @@
 import Card from "./Card.astro";
 import Foto from "./Foto.astro";
 import VideoCard from "./VideoCard.astro";
-import WebDevCard from "./WebDevCard.astro";
+// import WebDevCard from "./WebDevCard.astro";
 import Exclusive from "./Exclusive.astro"
 import { content } from "./generalContent";
 ---
@@ -17,10 +17,10 @@ import { content } from "./generalContent";
                 <Card title={item.video.title}>
                     <VideoCard slot="list"/>
                 </Card>
-            :item.web?
-                <Card title={item.web.title}>
-                    <WebDevCard slot="list"/>
-                </Card>
+            // :item.web?
+            //     <Card title={item.web.title}>
+            //         <WebDevCard slot="list"/>
+            //     </Card>
             : null
         ))
     }

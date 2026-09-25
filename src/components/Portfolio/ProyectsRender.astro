@@ -1,13 +1,13 @@
 ---
-import { development } from "./content";
-import ProyectsCard from "./Cards.astro";
+// import { development } from "./content";
+// import ProyectsCard from "./Cards.astro";
 import Embed from "./instagramPosts/EmbedCode.astro"
 ---
 
 <!--poner de nuevo cuando hayan mas de 3 proyectos lg:grid-rows-2 -->
 
 <div id="proyects-gallery" class="grid m-auto w-full sm:w-auto gap-8 place-items-center sm:place-items-start md:grid-cols-2 md:gap-4 lg:grid-cols-3 lg:gap-4 content-stretch grid-flow-row-dense">
-    {
+    <!-- {
         development?.map(
             ({buttons, title, tag, content, imgAlt, bkgImage, iconImage}) => (
                 // tag === 'Desarrollo Web'?
@@ -24,7 +24,7 @@ import Embed from "./instagramPosts/EmbedCode.astro"
             )
         )
 
-    }
+    } -->
     <Embed/>
     </div>
 
